@@ -22,14 +22,18 @@ const nextConfig = {
     pagesBufferLength: 2,
   },
   async rewrites() {
+    const isProd = process.env.NODE_ENV === 'production';
+    const backendUrl =
+      process.env.NEXT_PUBLIC_BACKEND_URL ||
+      (isProd ? 'https://backend-tpkm.onrender.com' : 'http://localhost:5000');
     return [
       {
         source: '/api/v1/:path*',
-        destination: 'http://localhost:5000/api/v1/:path*',
+        destination: `${backendUrl}/api/v1/:path*`,
       },
       {
         source: '/socket.io/:path*',
-        destination: 'http://localhost:5000/socket.io/:path*',
+        destination: `${backendUrl}/socket.io/:path*`,
       },
     ];
   },

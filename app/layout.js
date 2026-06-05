@@ -7,18 +7,18 @@ import fs from 'fs'
 import path from 'path'
 
 export const metadata = {
-  title: 'fyndkro — Find Room, Mess & Cook Near You',
+  title: 'FyndKaro — Find Room, Mess & Cook Near You',
   description: 'India\'s #1 all-in-one platform for rooms, roommates, mess, and cooks. 100% broker-free. Zero brokerage, direct owner contact.',
   keywords: 'rooms, roommate, PG, hostel, mess, tiffin, cook, bhopal, indore, broker-free, rental',
   openGraph: {
-    title: 'fyndkro — Find Room, Mess & Cook Near You',
+    title: 'FyndKaro — Find Room, Mess & Cook Near You',
     description: 'India\'s first all-in-one platform for rooms, roommates, mess, and cooks. 100% broker-free.',
     type: 'website',
-    siteName: 'fyndkro',
+    siteName: 'FyndKaro',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'fyndkro — Find Room, Mess & Cook Near You',
+    title: 'FyndKaro — Find Room, Mess & Cook Near You',
     description: 'India\'s first all-in-one platform for rooms, roommates, mess, and cooks.',
   },
   manifest: '/manifest.json',

@@ -1,6 +1,6 @@
 {
-  "name": "MasterX",
-  "short_name": "MasterX",
+  "name": "FyndKaro",
+  "short_name": "FyndKaro",
   "description": "Find rooms, roommates, mess, and cooks near you.",
   "start_url": "/",
   "display": "standalone",
