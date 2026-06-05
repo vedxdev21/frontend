@@ -1,0 +1,51 @@
+Rank,Company,Fit Score,Category Label,Country,Region,Remote,Funding Stage (approx),Company Size (approx),Website
+14,Portkey,100,LLM Infra / Ops,India,Global-Remote,Remote-first,Seed,1-50,https://portkey.ai
+30,Krutrim,96,AI Lab / Foundation Models,India,India,Remote-friendly,Series B,51-200,https://olakrutrim.com
+31,Two AI,96,AI Lab / Foundation Models,India,India,Remote-friendly,Series A,51-200,https://two.ai
+32,Sarvam AI,96,AI Lab / Foundation Models,India,India,Remote-friendly,Series A,51-200,https://sarvam.ai
+43,TrueFoundry,96,LLM Infra / Ops,India,India,Remote-friendly,Series A,51-200,https://truefoundry.com
+49,Maxim AI,96,LLM Infra / Ops,India,India,Remote-friendly,Seed,1-50,https://getmaxim.ai
+106,Hasura,90,Developer Tools,India,India,Remote-first,Series C,201-500,https://hasura.io
+122,Atlan,90,MLOps / Data Platform,India,Global-Remote,Remote-first,Series C,201-500,https://atlan.com
+190,Yellow.ai,86,AI SaaS,India,India,Remote-friendly,Series C,501-1000,https://yellow.ai
+241,Haptik,86,AI SaaS,India,India,Remote-friendly,Acquired (Jio),501-1000,https://haptik.ai
+242,Signzy,86,AI Fintech,India,India,Remote-friendly,Series B,201-500,https://signzy.com
+243,Wadhwani AI,86,Enterprise AI,India,India,Remote-friendly,Nonprofit,51-200,https://wadhwaniai.org
+244,Pixxel,86,Enterprise AI,India,India,Remote-friendly,Series B,201-500,https://pixxel.space
+245,Perfios,86,AI Fintech,India,India,Remote-friendly,Late-stage,1001-5000,https://perfios.com
+255,CleverTap,86,AI SaaS,India,India,Remote-friendly,Series D,501-1000,https://clevertap.com
+256,BrowserStack,86,Developer Tools,India,India,Remote-friendly,Series B,1001-5000,https://browserstack.com
+260,Observe.AI (India),86,Enterprise AI,India,India,Remote-friendly,Series C,201-500,https://observe.ai
+261,MoEngage,86,AI SaaS,India,India,Remote-friendly,Series E+,501-1000,https://moengage.com
+294,Flipkart,79,Public Tech,India,India,Hybrid,Late-stage,5000+,https://flipkart.com
+295,Zomato (Eternal),79,Public Tech,India,India,Hybrid,Public,5000+,https://zomato.com
+296,Swiggy,79,Public Tech,India,India,Hybrid,Public,5000+,https://swiggy.com
+297,Meesho,79,Public Tech,India,India,Hybrid,Late-stage,1001-5000,https://meesho.com
+318,SigNoz,76,Observability,India,Global-Remote,Remote-first,Series A,1-50,https://signoz.io
+333,Last9,72,Observability,India,India,Remote-friendly,Series A,51-200,https://last9.io
+355,Chargebee,67,SaaS / Product,India,India,Remote-friendly,Series H,1001-5000,https://chargebee.com
+356,Whatfix,67,SaaS / Product,India,India,Remote-friendly,Series E+,501-1000,https://whatfix.com
+370,Zoho,67,SaaS / Product,India,India,Remote-friendly,Profitable,5000+,https://zoho.com
+371,Darwinbox,67,SaaS / Product,India,India,Remote-friendly,Series D,1001-5000,https://darwinbox.com
+372,Freshworks,67,SaaS / Product,India,India,Remote-friendly,Public,5000+,https://freshworks.com
+387,Physics Wallah,64,Edtech,India,India,Remote-friendly,Late-stage,5000+,https://pw.live
+393,M2P Fintech,63,Fintech,India,India,Hybrid,Series D,1001-5000,https://m2pfintech.com
+394,Tiger Analytics,63,Consulting,India,India,Remote-friendly,Private,1001-5000,https://tigeranalytics.com
+400,Setu,63,Fintech,India,India,Hybrid,Acquired (Pine Labs),201-500,https://setu.co
+416,CRED,63,Fintech,India,India,Hybrid,Late-stage,1001-5000,https://cred.club
+420,Razorpay,63,Fintech,India,India,Hybrid,Series F,5000+,https://razorpay.com
+421,PhonePe,63,Fintech,India,India,Hybrid,Late-stage,5000+,https://phonepe.com
+422,Zerodha,63,Fintech,India,India,Hybrid,Profitable,1001-5000,https://zerodha.com
+423,Groww,63,Fintech,India,India,Hybrid,Late-stage,1001-5000,https://groww.in
+428,Juspay,63,Fintech,India,India,Hybrid,Series C,1001-5000,https://juspay.io
+438,Mphasis,59,IT Services,India,India,Hybrid,Public,5000+,https://mphasis.com
+441,Fractal Analytics,59,Consulting,India,India,Hybrid,Late-stage,5000+,https://fractal.ai
+442,LatentView Analytics,59,Consulting,India,India,Hybrid,Public,1001-5000,https://latentview.com
+443,Tata Consultancy Services,59,IT Services,India,India,Hybrid,Public,5000+,https://tcs.com
+445,Coforge,59,IT Services,India,India,Hybrid,Public,5000+,https://coforge.com
+446,LTIMindtree,59,IT Services,India,India,Hybrid,Public,5000+,https://ltimindtree.com
+447,Persistent Systems,59,IT Services,India,India,Hybrid,Public,5000+,https://persistent.com
+452,Infosys,59,IT Services,India,India,Hybrid,Public,5000+,https://infosys.com
+453,Wipro,59,IT Services,India,India,Hybrid,Public,5000+,https://wipro.com
+454,HCLTech,59,IT Services,India,India,Hybrid,Public,5000+,https://hcltech.com
+455,Tech Mahindra,59,IT Services,India,India,Hybrid,Public,5000+,https://techmahindra.com

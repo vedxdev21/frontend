@@ -1,0 +1,9 @@
+{
+  "name": "MasterX",
+  "short_name": "MasterX",
+  "description": "Find rooms, roommates, mess, and cooks near you.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf5",
+  "theme_color": "#f97316"
+}

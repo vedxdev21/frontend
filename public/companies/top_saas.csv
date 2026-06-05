@@ -1,0 +1,63 @@
+Rank,Company,Fit Score,Category Label,Country,Region,Remote,Funding Stage (approx),Company Size (approx),Website
+127,Builder.io,90,AI SaaS,USA,Global-Remote,Remote-first,Series A,51-200,https://builder.io
+130,Apollo.io,90,AI SaaS,USA,USA,Remote-first,Series D,501-1000,https://apollo.io
+142,Jasper,90,AI SaaS,USA,USA,Remote-first,Series A,201-500,https://jasper.ai
+143,Roboflow,90,AI SaaS,USA,USA,Remote-first,Series B,51-200,https://roboflow.com
+156,Leonardo.ai,86,AI SaaS,Australia,Australia,Remote-friendly,Acquired (Canva),51-200,https://leonardo.ai
+157,Channel Corp,86,AI SaaS,South Korea,South Korea,Remote-friendly,Series C,201-500,https://channel.io
+161,Canva,86,AI SaaS,Australia,Australia,Remote-friendly,Late-stage,5000+,https://canva.com
+162,Coveo,86,AI SaaS,Canada,Canada,Remote-friendly,Public,501-1000,https://coveo.com
+164,Descript,86,AI SaaS,USA,USA,Remote-friendly,Series C,201-500,https://descript.com
+165,Dixa,86,AI SaaS,Denmark,Denmark,Remote-friendly,Series C,201-500,https://dixa.com
+179,Gamma,86,AI SaaS,USA,USA,Remote-friendly,Series A,51-200,https://gamma.app
+180,Typeface,86,AI SaaS,USA,USA,Remote-friendly,Series B,201-500,https://typeface.ai
+181,HeyGen,86,AI SaaS,USA,USA,Remote-friendly,Series A,51-200,https://heygen.com
+183,Runway,86,AI SaaS,USA,USA,Remote-friendly,Series D,201-500,https://runwayml.com
+186,Wrtn Technologies,86,AI SaaS,South Korea,South Korea,Remote-friendly,Series B,51-200,https://wrtn.io
+190,Yellow.ai,86,AI SaaS,India,India,Remote-friendly,Series C,501-1000,https://yellow.ai
+201,Synthesia,86,AI SaaS,UK,UK,Remote-friendly,Late-stage,201-500,https://synthesia.io
+203,Intercom,86,AI SaaS,Ireland,Europe,Remote-friendly,Series D,501-1000,https://intercom.com
+205,Gong,86,AI SaaS,USA,USA,Remote-friendly,Late-stage,1001-5000,https://gong.io
+207,Airtable,86,AI SaaS,USA,USA,Remote-friendly,Series F,501-1000,https://airtable.com
+208,Notion,86,AI SaaS,USA,USA,Remote-friendly,Late-stage,501-1000,https://notion.so
+209,DeepL,86,AI SaaS,Germany,Germany,Remote-friendly,Series B,501-1000,https://deepl.com
+212,Bird,86,AI SaaS,Netherlands,Netherlands,Remote-friendly,Series C,501-1000,https://bird.com
+213,Framer,86,AI SaaS,Netherlands,Netherlands,Remote-friendly,Series C,201-500,https://framer.com
+215,Contentsquare,86,AI SaaS,France,France,Remote-friendly,Late-stage,1001-5000,https://contentsquare.com
+227,PhotoRoom,86,AI SaaS,France,France,Remote-friendly,Series B,51-200,https://photoroom.com
+241,Haptik,86,AI SaaS,India,India,Remote-friendly,Acquired (Jio),501-1000,https://haptik.ai
+254,Moloco,86,AI SaaS,USA,South Korea,Remote-friendly,Late-stage,501-1000,https://moloco.com
+255,CleverTap,86,AI SaaS,India,India,Remote-friendly,Series D,501-1000,https://clevertap.com
+261,MoEngage,86,AI SaaS,India,India,Remote-friendly,Series E+,501-1000,https://moengage.com
+262,Gupshup,86,AI SaaS,USA,India,Remote-friendly,Series F,1001-5000,https://gupshup.io
+263,Sprinklr,86,AI SaaS,USA,India,Remote-friendly,Public,1001-5000,https://sprinklr.com
+344,Linear,71,SaaS / Product,USA,Global-Remote,Remote-first,Series B,51-200,https://linear.app
+345,Atlassian,71,SaaS / Product,Australia,Australia,Remote-first,Public,5000+,https://atlassian.com
+346,Webflow,71,SaaS / Product,USA,USA,Remote-first,Series C,1001-5000,https://webflow.com
+347,Close,71,SaaS / Product,USA,Global-Remote,Remote-first,Profitable,51-200,https://close.com
+348,Storyblok,71,SaaS / Product,Austria,Europe,Remote-first,Series C,201-500,https://storyblok.com
+349,Sanity,71,SaaS / Product,Norway,Norway,Remote-first,Series C,201-500,https://sanity.io
+350,Twilio,71,SaaS / Product,USA,USA,Remote-first,Public,5000+,https://twilio.com
+352,Automattic,71,SaaS / Product,USA,Global-Remote,Remote-first,Private,1001-5000,https://automattic.com
+353,Remote.com,71,SaaS / Product,USA,Global-Remote,Remote-first,Series C,1001-5000,https://remote.com
+355,Chargebee,67,SaaS / Product,India,India,Remote-friendly,Series H,1001-5000,https://chargebee.com
+356,Whatfix,67,SaaS / Product,India,India,Remote-friendly,Series E+,501-1000,https://whatfix.com
+357,SmartHR,67,SaaS / Product,Japan,Japan,Remote-friendly,Series E+,1001-5000,https://smarthr.jp
+358,Sansan,67,SaaS / Product,Japan,Japan,Remote-friendly,Public,1001-5000,https://sansan.com
+359,Sendbird,67,SaaS / Product,USA,South Korea,Remote-friendly,Series C,201-500,https://sendbird.com
+360,Personio,67,SaaS / Product,Germany,Germany,Remote-friendly,Series E+,1001-5000,https://personio.com
+361,Mirakl,67,SaaS / Product,France,France,Remote-friendly,Series E+,501-1000,https://mirakl.com
+363,Mews,67,SaaS / Product,Netherlands,Netherlands,Remote-friendly,Series D,1001-5000,https://mews.com
+364,Figma,67,SaaS / Product,USA,USA,Remote-friendly,Public,1001-5000,https://figma.com
+365,Gelato,67,SaaS / Product,Norway,Norway,Remote-friendly,Late-stage,201-500,https://gelato.com
+366,HubSpot,67,SaaS / Product,USA,USA,Remote-friendly,Public,5000+,https://hubspot.com
+367,Contentful,67,SaaS / Product,Germany,Germany,Remote-friendly,Series F,501-1000,https://contentful.com
+369,Templafy,67,SaaS / Product,Denmark,Denmark,Remote-friendly,Series E+,201-500,https://templafy.com
+370,Zoho,67,SaaS / Product,India,India,Remote-friendly,Profitable,5000+,https://zoho.com
+371,Darwinbox,67,SaaS / Product,India,India,Remote-friendly,Series D,1001-5000,https://darwinbox.com
+372,Freshworks,67,SaaS / Product,India,India,Remote-friendly,Public,5000+,https://freshworks.com
+379,SafetyCulture,67,SaaS / Product,Australia,Australia,Remote-friendly,Series F,501-1000,https://safetyculture.com
+381,Employment Hero,67,SaaS / Product,Australia,Australia,Remote-friendly,Series F,1001-5000,https://employmenthero.com
+382,Culture Amp,67,SaaS / Product,Australia,Australia,Remote-friendly,Series F,501-1000,https://cultureamp.com
+384,Merge,67,SaaS / Product,USA,USA,Remote-friendly,Series B,51-200,https://merge.dev
+385,Clio,67,SaaS / Product,Canada,Canada,Remote-friendly,Series F,1001-5000,https://clio.com

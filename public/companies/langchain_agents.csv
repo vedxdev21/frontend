@@ -1,0 +1,198 @@
+Rank,Company,Fit Score,Category Label,Country,Region,Remote,Funding Stage (approx),Company Size (approx),Website
+1,Replicate,100,LLM Infra / Ops,USA,USA,Remote-first,Series B,51-200,https://replicate.com
+2,Unstructured,100,LLM Infra / Ops,USA,Global-Remote,Remote-first,Series B,51-200,https://unstructured.io
+3,Hugging Face,100,LLM Infra / Ops,USA,Global-Remote,Remote-first,Series D,201-500,https://huggingface.co
+4,Helicone,100,LLM Infra / Ops,USA,USA,Remote-first,Seed,1-50,https://helicone.ai
+5,Jina AI,100,LLM Infra / Ops,Germany,Germany,Remote-first,Series A,51-200,https://jina.ai
+6,OpenPipe,100,LLM Infra / Ops,USA,USA,Remote-first,Seed,1-50,https://openpipe.ai
+7,Weaviate,100,Vector DB / RAG,Netherlands,Netherlands,Remote-first,Series B,51-200,https://weaviate.io
+8,LanceDB,100,Vector DB / RAG,USA,USA,Remote-first,Seed,1-50,https://lancedb.com
+9,Marqo,100,Vector DB / RAG,Australia,Australia,Remote-first,Series A,1-50,https://marqo.ai
+10,Chroma,100,Vector DB / RAG,USA,USA,Remote-first,Series A,1-50,https://trychroma.com
+11,Qdrant,100,Vector DB / RAG,Germany,Germany,Remote-first,Series A,51-200,https://qdrant.tech
+12,Turbopuffer,100,Vector DB / RAG,USA,USA,Remote-first,Seed,1-50,https://turbopuffer.com
+13,RunPod,100,LLM Infra / Ops,USA,Global-Remote,Remote-first,Series A,51-200,https://runpod.io
+14,Portkey,100,LLM Infra / Ops,India,Global-Remote,Remote-first,Seed,1-50,https://portkey.ai
+15,Langfuse,100,LLM Infra / Ops,Germany,Germany,Remote-first,Seed,1-50,https://langfuse.com
+16,Composio,96,LLM Infra / Ops,USA,India,Remote-friendly,Seed,1-50,https://composio.dev
+17,ELYZA,96,AI Lab / Foundation Models,Japan,Japan,Remote-friendly,Corporate,51-200,https://elyza.ai
+18,AI71,96,AI Lab / Foundation Models,UAE,UAE,Remote-friendly,Private,51-200,https://ai71.ai
+19,Preferred Networks,96,AI Lab / Foundation Models,Japan,Japan,Remote-friendly,Private,501-1000,https://preferred.jp
+20,DeepSeek,96,AI Lab / Foundation Models,China,Global-Remote,Remote-friendly,Private,201-500,https://deepseek.com
+21,xAI,96,AI Lab / Foundation Models,USA,USA,Remote-friendly,Late-stage,501-1000,https://x.ai
+22,Mistral AI,96,AI Lab / Foundation Models,France,France,Remote-friendly,Series C,201-500,https://mistral.ai
+23,Cohere,96,AI Lab / Foundation Models,Canada,Canada,Remote-friendly,Series D,501-1000,https://cohere.com
+24,Aleph Alpha,96,AI Lab / Foundation Models,Germany,Germany,Remote-friendly,Series B,201-500,https://aleph-alpha.com
+25,Upstage,96,AI Lab / Foundation Models,South Korea,South Korea,Remote-friendly,Series B,51-200,https://upstage.ai
+26,Sakana AI,96,AI Lab / Foundation Models,Japan,Japan,Remote-friendly,Series A,51-200,https://sakana.ai
+27,Black Forest Labs,96,AI Lab / Foundation Models,Germany,Germany,Remote-friendly,Series B,1-50,https://blackforestlabs.ai
+28,LangChain,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series B,51-200,https://langchain.com
+29,LlamaIndex,96,LLM Infra / Ops,USA,USA,Remote-friendly,Seed,1-50,https://llamaindex.ai
+30,Krutrim,96,AI Lab / Foundation Models,India,India,Remote-friendly,Series B,51-200,https://olakrutrim.com
+31,Two AI,96,AI Lab / Foundation Models,India,India,Remote-friendly,Series A,51-200,https://two.ai
+32,Sarvam AI,96,AI Lab / Foundation Models,India,India,Remote-friendly,Series A,51-200,https://sarvam.ai
+33,Fireworks AI,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series B,51-200,https://fireworks.ai
+34,Together AI,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series B,201-500,https://together.ai
+35,AI21 Labs,96,AI Lab / Foundation Models,Israel,Europe,Remote-friendly,Series C,201-500,https://ai21.com
+36,Baseten,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series C,51-200,https://baseten.co
+37,Zilliz (Milvus),96,Vector DB / RAG,USA,USA,Remote-friendly,Series C,201-500,https://zilliz.com
+38,Anyscale,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series C,201-500,https://anyscale.com
+39,Modal,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series A,51-200,https://modal.com
+40,Lightning AI,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series C,51-200,https://lightning.ai
+41,Lamini,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series A,1-50,https://lamini.ai
+42,Predibase,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series B,51-200,https://predibase.com
+43,TrueFoundry,96,LLM Infra / Ops,India,India,Remote-friendly,Series A,51-200,https://truefoundry.com
+44,Pinecone,96,Vector DB / RAG,USA,USA,Remote-friendly,Series B,201-500,https://pinecone.io
+45,Braintrust,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series A,1-50,https://braintrust.dev
+46,Liquid AI,96,AI Lab / Foundation Models,USA,USA,Remote-friendly,Series A,51-200,https://liquid.ai
+47,Poolside,96,AI Lab / Foundation Models,France,France,Remote-friendly,Series B,51-200,https://poolside.ai
+48,Reka AI,96,AI Lab / Foundation Models,USA,USA,Remote-friendly,Series A,51-200,https://reka.ai
+49,Maxim AI,96,LLM Infra / Ops,India,India,Remote-friendly,Seed,1-50,https://getmaxim.ai
+50,Vespa,96,Vector DB / RAG,Norway,Norway,Remote-friendly,Series A,51-200,https://vespa.ai
+51,Patronus AI,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series A,1-50,https://patronus.ai
+52,OpenAI,96,AI Lab / Foundation Models,USA,USA,Remote-friendly,Late-stage,1001-5000,https://openai.com
+53,Anthropic,96,AI Lab / Foundation Models,USA,USA,Remote-friendly,Late-stage,1001-5000,https://anthropic.com
+54,Elicit,95,Search / RAG Product,USA,Global-Remote,Remote-first,Series A,1-50,https://elicit.com
+56,LiveKit,95,Voice / Multimodal AI,USA,USA,Remote-first,Series B,51-200,https://livekit.io
+57,Deepgram,95,Voice / Multimodal AI,USA,USA,Remote-first,Series B,51-200,https://deepgram.com
+58,ElevenLabs,95,Voice / Multimodal AI,UK,UK,Remote-first,Late-stage,201-500,https://elevenlabs.io
+59,AssemblyAI,95,Voice / Multimodal AI,USA,USA,Remote-first,Series C,51-200,https://assemblyai.com
+60,Google DeepMind,92,AI Lab / Foundation Models,UK,UK,Hybrid,5000+,5000+,https://deepmind.google
+61,Cognition,91,Agentic AI,USA,USA,Remote-friendly,Late-stage,51-200,https://cognition.ai
+62,Imbue,91,Agentic AI,USA,USA,Remote-friendly,Series B,51-200,https://imbue.com
+63,Dust,91,Agentic AI,France,France,Remote-friendly,Series A,51-200,https://dust.tt
+64,H Company,91,Agentic AI,France,France,Remote-friendly,Seed,51-200,https://hcompany.ai
+66,/dev/agents,91,Agentic AI,USA,USA,Remote-friendly,Seed,1-50,https://devagents.ai
+67,Algomatic,91,Agentic AI,Japan,Japan,Remote-friendly,Series A,51-200,https://algomatic.jp
+68,Vapi,91,Voice / Multimodal AI,USA,USA,Remote-friendly,Series A,1-50,https://vapi.ai
+71,Cartesia,91,Voice / Multimodal AI,USA,USA,Remote-friendly,Series A,51-200,https://cartesia.ai
+72,Speechmatics,91,Voice / Multimodal AI,UK,UK,Remote-friendly,Series B,51-200,https://speechmatics.com
+73,Hume AI,91,Voice / Multimodal AI,USA,USA,Remote-friendly,Series B,51-200,https://hume.ai
+74,MultiOn,91,Agentic AI,USA,USA,Remote-friendly,Seed,1-50,https://multion.ai
+75,Lindy,91,Agentic AI,USA,USA,Remote-friendly,Series A,1-50,https://lindy.ai
+76,CrewAI,91,Agentic AI,USA,USA,Remote-friendly,Series A,1-50,https://crewai.com
+77,Lyzr,91,Agentic AI,USA,USA,Remote-friendly,Seed,1-50,https://lyzr.ai
+78,Genspark,91,Search / RAG Product,USA,USA,Remote-friendly,Series A,51-200,https://genspark.ai
+79,WIZ.AI,91,Voice / Multimodal AI,Singapore,Singapore,Remote-friendly,Series B,201-500,https://wiz.ai
+80,Ema,91,Agentic AI,USA,USA,Remote-friendly,Series B,51-200,https://ema.co
+81,Beam AI,91,Agentic AI,Germany,Germany,Remote-friendly,Seed,1-50,https://beam.ai
+82,Lovable,91,Agentic AI,Sweden,Sweden,Remote-friendly,Series A,51-200,https://lovable.dev
+83,Relevance AI,91,Agentic AI,Australia,Australia,Remote-friendly,Series B,51-200,https://relevanceai.com
+84,Sierra,91,Agentic AI,USA,USA,Remote-friendly,Series B,201-500,https://sierra.ai
+85,Decagon,91,Agentic AI,USA,USA,Remote-friendly,Series C,51-200,https://decagon.ai
+86,You.com,91,Search / RAG Product,USA,USA,Remote-friendly,Series B,51-200,https://you.com
+87,Exa,91,Search / RAG Product,USA,USA,Remote-friendly,Series A,1-50,https://exa.ai
+88,Parloa,91,Voice / Multimodal AI,Germany,Germany,Remote-friendly,Series C,201-500,https://parloa.com
+89,Twelve Labs,91,Voice / Multimodal AI,USA,South Korea,Remote-friendly,Series A,51-200,https://twelvelabs.io
+90,Perplexity,91,Search / RAG Product,USA,USA,Remote-friendly,Late-stage,201-500,https://perplexity.ai
+91,Lorikeet,91,Agentic AI,Australia,Australia,Remote-friendly,Series A,1-50,https://lorikeet.ai
+92,Vectara,91,Search / RAG Product,USA,USA,Remote-friendly,Series A,51-200,https://vectara.com
+93,PolyAI,91,Voice / Multimodal AI,UK,UK,Remote-friendly,Series C,201-500,https://poly.ai
+95,Retell AI,91,Voice / Multimodal AI,USA,USA,Remote-friendly,Seed,1-50,https://retellai.com
+127,Builder.io,90,AI SaaS,USA,Global-Remote,Remote-first,Series A,51-200,https://builder.io
+130,Apollo.io,90,AI SaaS,USA,USA,Remote-first,Series D,501-1000,https://apollo.io
+142,Jasper,90,AI SaaS,USA,USA,Remote-first,Series A,201-500,https://jasper.ai
+143,Roboflow,90,AI SaaS,USA,USA,Remote-first,Series B,51-200,https://roboflow.com
+152,Allganize,86,Enterprise AI,South Korea,South Korea,Remote-friendly,Series B,51-200,https://allganize.ai
+156,Leonardo.ai,86,AI SaaS,Australia,Australia,Remote-friendly,Acquired (Canva),51-200,https://leonardo.ai
+157,Channel Corp,86,AI SaaS,South Korea,South Korea,Remote-friendly,Series C,201-500,https://channel.io
+158,Waabi,86,Enterprise AI,Canada,Canada,Remote-friendly,Series B,201-500,https://waabi.ai
+159,Borealis AI,86,AI Fintech,Canada,Canada,Remote-friendly,Corporate,51-200,https://borealisai.com
+161,Canva,86,AI SaaS,Australia,Australia,Remote-friendly,Late-stage,5000+,https://canva.com
+162,Coveo,86,AI SaaS,Canada,Canada,Remote-friendly,Public,501-1000,https://coveo.com
+163,Cohere Health,86,AI Healthtech,USA,USA,Remote-friendly,Series C,501-1000,https://coherehealth.com
+164,Descript,86,AI SaaS,USA,USA,Remote-friendly,Series C,201-500,https://descript.com
+165,Dixa,86,AI SaaS,Denmark,Denmark,Remote-friendly,Series C,201-500,https://dixa.com
+170,Forethought,86,Enterprise AI,USA,USA,Remote-friendly,Series C,51-200,https://forethought.ai
+174,Observe.AI,86,Enterprise AI,USA,USA,Remote-friendly,Series C,201-500,https://observe.ai
+178,Aisera,86,Enterprise AI,USA,USA,Remote-friendly,Series D,201-500,https://aisera.com
+179,Gamma,86,AI SaaS,USA,USA,Remote-friendly,Series A,51-200,https://gamma.app
+180,Typeface,86,AI SaaS,USA,USA,Remote-friendly,Series B,201-500,https://typeface.ai
+181,HeyGen,86,AI SaaS,USA,USA,Remote-friendly,Series A,51-200,https://heygen.com
+182,Ada,86,Enterprise AI,Canada,Canada,Remote-friendly,Series C,201-500,https://ada.cx
+183,Runway,86,AI SaaS,USA,USA,Remote-friendly,Series D,201-500,https://runwayml.com
+185,Contextual AI,86,Enterprise AI,USA,USA,Remote-friendly,Series A,51-200,https://contextual.ai
+186,Wrtn Technologies,86,AI SaaS,South Korea,South Korea,Remote-friendly,Series B,51-200,https://wrtn.io
+187,Corti,86,AI Healthtech,Denmark,Denmark,Remote-friendly,Series B,51-200,https://corti.ai
+188,abeja,86,Enterprise AI,Japan,Japan,Remote-friendly,Private,201-500,https://abejainc.com
+189,PKSHA Technology,86,Enterprise AI,Japan,Japan,Remote-friendly,Public,501-1000,https://pkshatech.com
+190,Yellow.ai,86,AI SaaS,India,India,Remote-friendly,Series C,501-1000,https://yellow.ai
+191,Tabby,86,AI Fintech,UAE,UAE,Remote-friendly,Series D,501-1000,https://tabby.ai
+192,Legora,86,Enterprise AI,Sweden,Sweden,Remote-friendly,Series B,51-200,https://legora.com
+194,Robin AI,86,Enterprise AI,UK,UK,Remote-friendly,Series B,201-500,https://robinai.com
+195,EvenUp,86,Enterprise AI,USA,USA,Remote-friendly,Series D,201-500,https://evenuplaw.com
+196,Hebbia,86,Enterprise AI,USA,USA,Remote-friendly,Series B,51-200,https://hebbia.com
+197,Moveworks,86,Enterprise AI,USA,USA,Remote-friendly,Late-stage,501-1000,https://moveworks.com
+198,Cresta,86,Enterprise AI,USA,USA,Remote-friendly,Series D,201-500,https://cresta.com
+199,ComplyAdvantage,86,AI Fintech,UK,UK,Remote-friendly,Series C,501-1000,https://complyadvantage.com
+200,Glean,86,Enterprise AI,USA,USA,Remote-friendly,Late-stage,501-1000,https://glean.com
+201,Synthesia,86,AI SaaS,UK,UK,Remote-friendly,Late-stage,201-500,https://synthesia.io
+203,Intercom,86,AI SaaS,Ireland,Europe,Remote-friendly,Series D,501-1000,https://intercom.com
+205,Gong,86,AI SaaS,USA,USA,Remote-friendly,Late-stage,1001-5000,https://gong.io
+206,Cradle,86,AI Healthtech,Netherlands,Netherlands,Remote-friendly,Series B,51-200,https://cradle.bio
+207,Airtable,86,AI SaaS,USA,USA,Remote-friendly,Series F,501-1000,https://airtable.com
+208,Notion,86,AI SaaS,USA,USA,Remote-friendly,Late-stage,501-1000,https://notion.so
+209,DeepL,86,AI SaaS,Germany,Germany,Remote-friendly,Series B,501-1000,https://deepl.com
+210,Alan,86,AI Healthtech,France,France,Remote-friendly,Series F,501-1000,https://alan.com
+212,Bird,86,AI SaaS,Netherlands,Netherlands,Remote-friendly,Series C,501-1000,https://bird.com
+213,Framer,86,AI SaaS,Netherlands,Netherlands,Remote-friendly,Series C,201-500,https://framer.com
+214,Owkin,86,AI Healthtech,France,France,Remote-friendly,Series B,201-500,https://owkin.com
+215,Contentsquare,86,AI SaaS,France,France,Remote-friendly,Late-stage,1001-5000,https://contentsquare.com
+216,Cognite,86,Enterprise AI,Norway,Norway,Remote-friendly,Late-stage,501-1000,https://cognite.com
+217,Harvey,86,Enterprise AI,USA,USA,Remote-friendly,Late-stage,201-500,https://harvey.ai
+218,Numeral,86,AI Fintech,USA,USA,Remote-friendly,Series A,1-50,https://numeral.io
+219,OpenEvidence,86,AI Healthtech,USA,USA,Remote-friendly,Late-stage,51-200,https://openevidence.com
+220,Innovaccer,86,AI Healthtech,USA,India,Remote-friendly,Series F,1001-5000,https://innovaccer.com
+221,Suki AI,86,AI Healthtech,USA,USA,Remote-friendly,Series D,201-500,https://suki.ai
+222,Commure,86,AI Healthtech,USA,USA,Remote-friendly,Late-stage,1001-5000,https://commure.com
+223,Lunit,86,AI Healthtech,South Korea,South Korea,Remote-friendly,Public,501-1000,https://lunit.io
+224,Harrison.ai,86,AI Healthtech,Australia,Australia,Remote-friendly,Series C,201-500,https://harrison.ai
+225,Rogo,86,AI Fintech,USA,USA,Remote-friendly,Series B,51-200,https://rogo.ai
+226,Klarna,86,AI Fintech,Sweden,Sweden,Remote-friendly,Public,1001-5000,https://klarna.com
+227,PhotoRoom,86,AI SaaS,France,France,Remote-friendly,Series B,51-200,https://photoroom.com
+228,Pennylane,86,AI Fintech,France,France,Remote-friendly,Series D,501-1000,https://pennylane.com
+230,Helsing,86,Enterprise AI,Germany,Germany,Remote-friendly,Series C,501-1000,https://helsing.ai
+231,Celonis,86,Enterprise AI,Germany,Germany,Remote-friendly,Late-stage,1001-5000,https://celonis.com
+232,Nabla,86,AI Healthtech,France,France,Remote-friendly,Series C,51-200,https://nabla.com
+233,Hippocratic AI,86,AI Healthtech,USA,USA,Remote-friendly,Series C,201-500,https://hippocraticai.com
+234,Ramp,86,AI Fintech,USA,USA,Remote-friendly,Late-stage,1001-5000,https://ramp.com
+235,Tempus AI,86,AI Healthtech,USA,USA,Remote-friendly,Public,1001-5000,https://tempus.com
+236,Abridge,86,AI Healthtech,USA,USA,Remote-friendly,Late-stage,201-500,https://abridge.com
+237,Ambience Healthcare,86,AI Healthtech,USA,USA,Remote-friendly,Series C,201-500,https://ambiencehealthcare.com
+238,Brex,86,AI Fintech,USA,USA,Remote-friendly,Late-stage,1001-5000,https://brex.com
+239,Palantir,86,Enterprise AI,USA,USA,Remote-friendly,Public,1001-5000,https://palantir.com
+240,Uniphore,86,Enterprise AI,USA,India,Remote-friendly,Series E+,501-1000,https://uniphore.com
+241,Haptik,86,AI SaaS,India,India,Remote-friendly,Acquired (Jio),501-1000,https://haptik.ai
+242,Signzy,86,AI Fintech,India,India,Remote-friendly,Series B,201-500,https://signzy.com
+243,Wadhwani AI,86,Enterprise AI,India,India,Remote-friendly,Nonprofit,51-200,https://wadhwaniai.org
+244,Pixxel,86,Enterprise AI,India,India,Remote-friendly,Series B,201-500,https://pixxel.space
+245,Perfios,86,AI Fintech,India,India,Remote-friendly,Late-stage,1001-5000,https://perfios.com
+246,Faculty,86,Enterprise AI,UK,UK,Remote-friendly,Series B,201-500,https://faculty.ai
+247,Quantexa,86,Enterprise AI,UK,UK,Remote-friendly,Series F,1001-5000,https://quantexa.com
+248,Wayve,86,Enterprise AI,UK,UK,Remote-friendly,Series C,201-500,https://wayve.ai
+249,Writer,86,Enterprise AI,USA,USA,Remote-friendly,Series C,201-500,https://writer.com
+250,G42,86,Enterprise AI,UAE,UAE,Remote-friendly,Private,1001-5000,https://g42.ai
+251,Carro,86,Enterprise AI,Singapore,Singapore,Remote-friendly,Series C,1001-5000,https://carro.co
+252,Advance Intelligence Group,86,AI Fintech,Singapore,Singapore,Remote-friendly,Series E+,1001-5000,https://advance.ai
+253,Presight AI,86,Enterprise AI,UAE,UAE,Remote-friendly,Public,501-1000,https://presight.ai
+254,Moloco,86,AI SaaS,USA,South Korea,Remote-friendly,Late-stage,501-1000,https://moloco.com
+255,CleverTap,86,AI SaaS,India,India,Remote-friendly,Series D,501-1000,https://clevertap.com
+257,Hyperbots,86,AI Fintech,USA,India,Remote-friendly,Series A,51-200,https://hyperbots.ai
+258,LayerX,86,AI Fintech,Japan,Japan,Remote-friendly,Series A,201-500,https://layerx.co.jp
+259,Patsnap,86,Enterprise AI,Singapore,Singapore,Remote-friendly,Series E+,501-1000,https://patsnap.com
+260,Observe.AI (India),86,Enterprise AI,India,India,Remote-friendly,Series C,201-500,https://observe.ai
+261,MoEngage,86,AI SaaS,India,India,Remote-friendly,Series E+,501-1000,https://moengage.com
+262,Gupshup,86,AI SaaS,USA,India,Remote-friendly,Series F,1001-5000,https://gupshup.io
+263,Sprinklr,86,AI SaaS,USA,India,Remote-friendly,Public,1001-5000,https://sprinklr.com
+264,MagicSchool AI,85,AI Edtech,USA,Global-Remote,Remote-first,Series B,51-200,https://magicschool.ai
+265,Zapier,85,Automation,USA,Global-Remote,Remote-first,Profitable,501-1000,https://zapier.com
+266,n8n,85,Automation,Germany,Germany,Remote-first,Series B,51-200,https://n8n.io
+267,Pipedream,85,Automation,USA,USA,Remote-first,Series A,1-50,https://pipedream.com
+268,Workato,85,Automation,USA,USA,Remote-first,Series E+,1001-5000,https://workato.com
+272,Mathpresso (QANDA),81,AI Edtech,South Korea,South Korea,Remote-friendly,Series C,201-500,https://mathpresso.com
+273,Riiid,81,AI Edtech,South Korea,South Korea,Remote-friendly,Series D,201-500,https://riiid.com
+274,Duolingo,81,AI Edtech,USA,USA,Remote-friendly,Public,501-1000,https://duolingo.com
+277,Sana Labs,81,AI Edtech,Sweden,Sweden,Remote-friendly,Series C,201-500,https://sanalabs.com
+279,Make,81,Automation,Czechia,Europe,Remote-friendly,Private,501-1000,https://make.com
+281,Speak,81,AI Edtech,USA,USA,Remote-friendly,Series C,201-500,https://speak.com
+282,Multiverse,81,AI Edtech,UK,UK,Remote-friendly,Series D,501-1000,https://multiverse.io

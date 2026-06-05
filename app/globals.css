@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Colors - Hero Gradient System */
+    --color-hero-gradient: linear-gradient(135deg, #f97316 0%, #fb923c 40%, #facc15 100%);
+    --color-primary: #f97316;
+    --color-primary-light: #fb923c;
+    --color-primary-lighter: #facc15;
+    --color-accent: #fbbf24;
+    --color-accent-glow: rgba(249, 115, 22, 0.3);
+    
+    /* Glass UI Colors */
+    --color-glass-bg: rgba(255, 255, 255, 0.15);
+    --color-glass-border: rgba(255, 255, 255, 0.3);
+    --color-glass-backdrop: blur(8px);
+    
+    /* Text Colors */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #f3f4f6;
+    --color-text-dark: #1f2937;
+    
+    /* Shadui base colors */
+    --background: 32 43% 98%;
+    --foreground: 224 42% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 42% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 42% 13%;
+    --primary: 24.6 95% 53.1%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 34 45% 95%;
+    --secondary-foreground: 224 34% 16%;
+    --muted: 35 28% 94%;
+    --muted-foreground: 224 14% 42%;
+    --accent: 36 90% 93%;
+    --accent-foreground: 224 34% 16%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 28 28% 88%;
+    --input: 28 28% 88%;
+    --ring: 24.6 95% 53.1%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.9rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(251, 146, 60, 0.14), transparent 36%),
+      radial-gradient(circle at 100% 100%, rgba(245, 158, 11, 0.14), transparent 42%),
+      linear-gradient(180deg, #fff9f3 0%, #fffefe 60%);
+    min-height: 100vh;
+  }
+  @media (min-width: 1024px) {
+    body {
+      background-image:
+        radial-gradient(circle at 10% 8%, rgba(251, 146, 60, 0.2), transparent 30%),
+        radial-gradient(circle at 90% 92%, rgba(245, 158, 11, 0.18), transparent 34%),
+        radial-gradient(circle at 52% -12%, rgba(251, 191, 36, 0.16), transparent 26%),
+        linear-gradient(180deg, rgba(255, 248, 238, 0.98), rgba(255, 255, 255, 1));
+    }
+  }
+  .min-h-screen.bg-gray-50 {
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(251, 146, 60, 0.12), transparent 34%),
+      radial-gradient(circle at 100% 100%, rgba(245, 158, 11, 0.12), transparent 40%),
+      linear-gradient(180deg, #fff8f1 0%, #fff 62%);
+  }
+  @media (min-width: 1024px) {
+    .min-h-screen.bg-gray-50 {
+      background-image:
+        radial-gradient(circle at 8% 10%, rgba(251, 146, 60, 0.2), transparent 28%),
+        radial-gradient(circle at 92% 88%, rgba(245, 158, 11, 0.18), transparent 32%),
+        linear-gradient(180deg, #fff7ee 0%, #fff 60%);
+    }
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    background: rgba(249, 115, 22, 0.18);
+    color: hsl(var(--foreground));
+  }
+  *:focus-visible {
+    outline: 2px solid rgba(249, 115, 22, 0.75);
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 active:scale-[0.98] shadow-[0_8px_20px_-10px_rgba(249,115,22,0.75)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(249,115,22,0.85)] focus-visible:ring-2 focus-visible:ring-orange-300/70 focus-visible:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply bg-white/90 backdrop-blur-sm border border-orange-100 text-gray-700 font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 shadow-[0_10px_22px_-16px_rgba(15,23,42,0.5)] hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-18px_rgba(249,115,22,0.35)] hover:border-orange-200;
+  }
+  .btn-outline {
+    @apply border border-orange-300/90 bg-gradient-to-b from-orange-50 to-amber-50 text-orange-700 hover:from-orange-100 hover:to-amber-100 font-semibold px-5 py-2.5 rounded-xl transition-all duration-300;
+  }
+  .card-hover {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl border border-orange-100/80 shadow-[0_12px_30px_-20px_rgba(15,23,42,0.45)] hover:shadow-[0_24px_52px_-24px_rgba(249,115,22,0.5)] hover:border-orange-200 transition-all duration-300;
+  }
+  .input-field {
+    @apply w-full border border-orange-200/70 bg-white/95 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder:text-gray-400 focus:ring-4 focus:ring-orange-400/20 focus:border-orange-400 outline-none transition-all shadow-[inset_0_1px_1px_rgba(0,0,0,0.02)];
+  }
+  .glass-panel {
+    @apply bg-white/85 backdrop-blur-md border border-orange-100/80 rounded-2xl shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* Float animation (hero images) */
+@keyframes float-img {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+.animate-float-hero {
+  animation: float-img 4s ease-in-out infinite;
+}
+
+/* Fade & slide animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-in {
+  animation: fadeUp 0.5s ease forwards;
+}
+.animate-in:nth-child(2) { animation-delay: 0.1s; }
+.animate-in:nth-child(3) { animation-delay: 0.2s; }
+.animate-in:nth-child(4) { animation-delay: 0.3s; }
+.animate-in:nth-child(5) { animation-delay: 0.4s; }
+
+/* Skeleton shimmer loading */
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-primary) 25%, var(--color-primary-light) 50%, var(--color-primary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius);
+}
+
+/* Soft pulse animation for custom live indicators */
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.72; }
+}
+.pulse { animation: live-pulse 2s ease-in-out infinite; }
+
+/* Glow effect */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+  50% { box-shadow: 0 0 30px rgba(249, 115, 22, 0.6); }
+}
+.animate-glow { animation: glow 3s ease-in-out infinite; }
+
+/* Hero background gradient */
+.hero-bg {
+  background: var(--color-hero-gradient);
+}
+
+/* Glass UI styling */
+.glass-tag {
+  background: var(--color-glass-bg);
+  backdrop-filter: var(--color-glass-backdrop);
+  border: 1px solid var(--color-glass-border);
+}
+
+.glass-card {
+  background: var(--color-glass-bg);
+  backdrop-filter: var(--color-glass-backdrop);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 1.5rem;
+}
+
+/* Dotted texture overlays */
+.dotted-texture {
+  background-image: radial-gradient(rgba(255,255,255,0.15) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.stats-dotted {
+  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Tabular numbers for stats */
+.stat-number {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

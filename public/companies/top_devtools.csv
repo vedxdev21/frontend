@@ -1,0 +1,31 @@
+Rank,Company,Fit Score,Category Label,Country,Region,Remote,Funding Stage (approx),Company Size (approx),Website
+98,StackBlitz,90,Developer Tools,USA,Global-Remote,Remote-first,Series B,1-50,https://stackblitz.com
+99,Oven (Bun),90,Developer Tools,USA,USA,Remote-first,Series A,1-50,https://bun.sh
+100,Coder,90,Developer Tools,USA,USA,Remote-first,Series C,51-200,https://coder.com
+101,Gitpod,90,Developer Tools,Germany,Global-Remote,Remote-first,Series A,51-200,https://gitpod.io
+102,Zed Industries,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://zed.dev
+103,Warp,90,Developer Tools,USA,USA,Remote-first,Series B,51-200,https://warp.dev
+104,Supabase,90,Developer Tools,USA,Global-Remote,Remote-first,Series C,51-200,https://supabase.com
+105,Postman,90,Developer Tools,USA,India,Remote-first,Series D,1001-5000,https://postman.com
+106,Hasura,90,Developer Tools,India,India,Remote-first,Series C,201-500,https://hasura.io
+107,Prisma,90,Developer Tools,Germany,Germany,Remote-first,Series B,51-200,https://prisma.io
+108,Deno,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://deno.com
+112,Netlify,90,Developer Tools,USA,USA,Remote-first,Series D,201-500,https://netlify.com
+113,Sourcegraph,90,Developer Tools,USA,USA,Remote-first,Series D,201-500,https://sourcegraph.com
+114,GitHub,90,Developer Tools,USA,USA,Remote-first,Public (MSFT),1001-5000,https://github.com
+115,Replit,90,Developer Tools,USA,USA,Remote-first,Series B,201-500,https://replit.com
+128,Appwrite,90,Developer Tools,Israel,Global-Remote,Remote-first,Series B,51-200,https://appwrite.io
+131,Anysphere (Cursor),90,Developer Tools,USA,USA,Remote-first,Late-stage,51-200,https://cursor.com
+132,Windsurf (Codeium),90,Developer Tools,USA,USA,Remote-first,Series C,201-500,https://windsurf.com
+134,Novu,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://novu.co
+135,Trigger.dev,90,Developer Tools,UK,Global-Remote,Remote-first,Series A,1-50,https://trigger.dev
+136,Cal.com,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,51-200,https://cal.com
+137,Resend,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://resend.com
+138,Inngest,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://inngest.com
+139,Strapi,90,Developer Tools,France,Global-Remote,Remote-first,Series B,51-200,https://strapi.io
+145,Hygraph,90,Developer Tools,Germany,Global-Remote,Remote-first,Series B,51-200,https://hygraph.com
+146,Medusa,90,Developer Tools,Denmark,Global-Remote,Remote-first,Series A,1-50,https://medusajs.com
+147,GitLab,90,Developer Tools,USA,Global-Remote,Remote-first,Public,1001-5000,https://gitlab.com
+193,Vercel,86,Developer Tools,USA,USA,Remote-friendly,Series E+,501-1000,https://vercel.com
+202,Retool,86,Developer Tools,USA,USA,Remote-friendly,Series C,201-500,https://retool.com
+256,BrowserStack,86,Developer Tools,India,India,Remote-friendly,Series B,1001-5000,https://browserstack.com

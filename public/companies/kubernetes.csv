@@ -1,0 +1,160 @@
+Rank,Company,Fit Score,Category Label,Country,Region,Remote,Funding Stage (approx),Company Size (approx),Website
+1,Replicate,100,LLM Infra / Ops,USA,USA,Remote-first,Series B,51-200,https://replicate.com
+2,Unstructured,100,LLM Infra / Ops,USA,Global-Remote,Remote-first,Series B,51-200,https://unstructured.io
+3,Hugging Face,100,LLM Infra / Ops,USA,Global-Remote,Remote-first,Series D,201-500,https://huggingface.co
+4,Helicone,100,LLM Infra / Ops,USA,USA,Remote-first,Seed,1-50,https://helicone.ai
+5,Jina AI,100,LLM Infra / Ops,Germany,Germany,Remote-first,Series A,51-200,https://jina.ai
+6,OpenPipe,100,LLM Infra / Ops,USA,USA,Remote-first,Seed,1-50,https://openpipe.ai
+7,Weaviate,100,Vector DB / RAG,Netherlands,Netherlands,Remote-first,Series B,51-200,https://weaviate.io
+8,LanceDB,100,Vector DB / RAG,USA,USA,Remote-first,Seed,1-50,https://lancedb.com
+9,Marqo,100,Vector DB / RAG,Australia,Australia,Remote-first,Series A,1-50,https://marqo.ai
+10,Chroma,100,Vector DB / RAG,USA,USA,Remote-first,Series A,1-50,https://trychroma.com
+11,Qdrant,100,Vector DB / RAG,Germany,Germany,Remote-first,Series A,51-200,https://qdrant.tech
+12,Turbopuffer,100,Vector DB / RAG,USA,USA,Remote-first,Seed,1-50,https://turbopuffer.com
+13,RunPod,100,LLM Infra / Ops,USA,Global-Remote,Remote-first,Series A,51-200,https://runpod.io
+14,Portkey,100,LLM Infra / Ops,India,Global-Remote,Remote-first,Seed,1-50,https://portkey.ai
+15,Langfuse,100,LLM Infra / Ops,Germany,Germany,Remote-first,Seed,1-50,https://langfuse.com
+16,Composio,96,LLM Infra / Ops,USA,India,Remote-friendly,Seed,1-50,https://composio.dev
+28,LangChain,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series B,51-200,https://langchain.com
+29,LlamaIndex,96,LLM Infra / Ops,USA,USA,Remote-friendly,Seed,1-50,https://llamaindex.ai
+33,Fireworks AI,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series B,51-200,https://fireworks.ai
+34,Together AI,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series B,201-500,https://together.ai
+36,Baseten,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series C,51-200,https://baseten.co
+37,Zilliz (Milvus),96,Vector DB / RAG,USA,USA,Remote-friendly,Series C,201-500,https://zilliz.com
+38,Anyscale,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series C,201-500,https://anyscale.com
+39,Modal,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series A,51-200,https://modal.com
+40,Lightning AI,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series C,51-200,https://lightning.ai
+41,Lamini,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series A,1-50,https://lamini.ai
+42,Predibase,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series B,51-200,https://predibase.com
+43,TrueFoundry,96,LLM Infra / Ops,India,India,Remote-friendly,Series A,51-200,https://truefoundry.com
+44,Pinecone,96,Vector DB / RAG,USA,USA,Remote-friendly,Series B,201-500,https://pinecone.io
+45,Braintrust,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series A,1-50,https://braintrust.dev
+49,Maxim AI,96,LLM Infra / Ops,India,India,Remote-friendly,Seed,1-50,https://getmaxim.ai
+50,Vespa,96,Vector DB / RAG,Norway,Norway,Remote-friendly,Series A,51-200,https://vespa.ai
+51,Patronus AI,96,LLM Infra / Ops,USA,USA,Remote-friendly,Series A,1-50,https://patronus.ai
+98,StackBlitz,90,Developer Tools,USA,Global-Remote,Remote-first,Series B,1-50,https://stackblitz.com
+99,Oven (Bun),90,Developer Tools,USA,USA,Remote-first,Series A,1-50,https://bun.sh
+100,Coder,90,Developer Tools,USA,USA,Remote-first,Series C,51-200,https://coder.com
+101,Gitpod,90,Developer Tools,Germany,Global-Remote,Remote-first,Series A,51-200,https://gitpod.io
+102,Zed Industries,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://zed.dev
+103,Warp,90,Developer Tools,USA,USA,Remote-first,Series B,51-200,https://warp.dev
+104,Supabase,90,Developer Tools,USA,Global-Remote,Remote-first,Series C,51-200,https://supabase.com
+105,Postman,90,Developer Tools,USA,India,Remote-first,Series D,1001-5000,https://postman.com
+106,Hasura,90,Developer Tools,India,India,Remote-first,Series C,201-500,https://hasura.io
+107,Prisma,90,Developer Tools,Germany,Germany,Remote-first,Series B,51-200,https://prisma.io
+108,Deno,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://deno.com
+109,PlanetScale,90,Infrastructure,USA,USA,Remote-first,Series C,51-200,https://planetscale.com
+110,Turso,90,Infrastructure,USA,Global-Remote,Remote-first,Series A,1-50,https://turso.tech
+111,Neon,90,Infrastructure,USA,Global-Remote,Remote-first,Series B,51-200,https://neon.tech
+112,Netlify,90,Developer Tools,USA,USA,Remote-first,Series D,201-500,https://netlify.com
+113,Sourcegraph,90,Developer Tools,USA,USA,Remote-first,Series D,201-500,https://sourcegraph.com
+114,GitHub,90,Developer Tools,USA,USA,Remote-first,Public (MSFT),1001-5000,https://github.com
+115,Replit,90,Developer Tools,USA,USA,Remote-first,Series B,201-500,https://replit.com
+116,MotherDuck,90,MLOps / Data Platform,USA,USA,Remote-first,Series B,51-200,https://motherduck.com
+117,ClickHouse,90,MLOps / Data Platform,USA,Global-Remote,Remote-first,Series C,201-500,https://clickhouse.com
+118,Astronomer,90,MLOps / Data Platform,USA,Global-Remote,Remote-first,Series C,201-500,https://astronomer.io
+119,Prefect,90,MLOps / Data Platform,USA,USA,Remote-first,Series B,51-200,https://prefect.io
+120,Airbyte,90,MLOps / Data Platform,USA,USA,Remote-first,Series B,201-500,https://airbyte.com
+121,Dagster Labs,90,MLOps / Data Platform,USA,USA,Remote-first,Series B,51-200,https://dagster.io
+122,Atlan,90,MLOps / Data Platform,India,Global-Remote,Remote-first,Series C,201-500,https://atlan.com
+123,Materialize,90,MLOps / Data Platform,USA,USA,Remote-first,Series C,51-200,https://materialize.com
+124,Pulumi,90,Infrastructure,USA,USA,Remote-first,Series C,51-200,https://pulumi.com
+125,Tinybird,90,MLOps / Data Platform,Spain,Europe,Remote-first,Series A,51-200,https://tinybird.co
+126,HashiCorp,90,Infrastructure,USA,USA,Remote-first,Public,1001-5000,https://hashicorp.com
+128,Appwrite,90,Developer Tools,Israel,Global-Remote,Remote-first,Series B,51-200,https://appwrite.io
+129,Elastic,90,Infrastructure,USA,Global-Remote,Remote-first,Public,1001-5000,https://elastic.co
+131,Anysphere (Cursor),90,Developer Tools,USA,USA,Remote-first,Late-stage,51-200,https://cursor.com
+132,Windsurf (Codeium),90,Developer Tools,USA,USA,Remote-first,Series C,201-500,https://windsurf.com
+133,Comet,90,MLOps / Data Platform,USA,USA,Remote-first,Series B,51-200,https://comet.com
+134,Novu,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://novu.co
+135,Trigger.dev,90,Developer Tools,UK,Global-Remote,Remote-first,Series A,1-50,https://trigger.dev
+136,Cal.com,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,51-200,https://cal.com
+137,Resend,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://resend.com
+138,Inngest,90,Developer Tools,USA,Global-Remote,Remote-first,Series A,1-50,https://inngest.com
+139,Strapi,90,Developer Tools,France,Global-Remote,Remote-first,Series B,51-200,https://strapi.io
+140,Spacelift,90,Infrastructure,USA,Global-Remote,Remote-first,Series B,51-200,https://spacelift.io
+141,Loft Labs,90,Infrastructure,USA,USA,Remote-first,Series A,1-50,https://loft.sh
+144,dbt Labs,90,MLOps / Data Platform,USA,USA,Remote-first,Series D,501-1000,https://getdbt.com
+145,Hygraph,90,Developer Tools,Germany,Global-Remote,Remote-first,Series B,51-200,https://hygraph.com
+146,Medusa,90,Developer Tools,Denmark,Global-Remote,Remote-first,Series A,1-50,https://medusajs.com
+147,GitLab,90,Developer Tools,USA,Global-Remote,Remote-first,Public,1001-5000,https://gitlab.com
+148,Shopify,87,Public Tech,Canada,Canada,Remote-first,Public,5000+,https://shopify.com
+149,Spotify,87,Public Tech,Sweden,Sweden,Remote-first,Public,5000+,https://spotify.com
+150,Airbnb,87,Public Tech,USA,USA,Remote-first,Public,5000+,https://airbnb.com
+151,FuriosaAI,86,Infrastructure,South Korea,South Korea,Remote-friendly,Series C,201-500,https://furiosa.ai
+153,Twilio Segment,86,MLOps / Data Platform,USA,USA,Remote-friendly,Public,1001-5000,https://segment.com
+154,Hightouch,86,MLOps / Data Platform,USA,USA,Remote-friendly,Series C,201-500,https://hightouch.com
+155,Immutable,86,Infrastructure,Australia,Australia,Remote-friendly,Series C,201-500,https://immutable.com
+160,Tenstorrent,86,Infrastructure,Canada,Canada,Remote-friendly,Late-stage,501-1000,https://tenstorrent.com
+166,Weights & Biases,86,MLOps / Data Platform,USA,USA,Remote-friendly,Series C,201-500,https://wandb.ai
+167,SambaNova,86,Infrastructure,USA,USA,Remote-friendly,Late-stage,501-1000,https://sambanova.ai
+168,Cerebras,86,Infrastructure,USA,USA,Remote-friendly,Late-stage,501-1000,https://cerebras.ai
+169,Groq,86,Infrastructure,USA,USA,Remote-friendly,Late-stage,201-500,https://groq.com
+171,Confluent,86,Infrastructure,USA,USA,Remote-friendly,Public,1001-5000,https://confluent.io
+172,Fivetran,86,MLOps / Data Platform,USA,USA,Remote-friendly,Series D,1001-5000,https://fivetran.com
+173,Hex,86,MLOps / Data Platform,USA,USA,Remote-friendly,Series B,201-500,https://hex.tech
+175,Monte Carlo,86,MLOps / Data Platform,USA,USA,Remote-friendly,Series D,201-500,https://montecarlodata.com
+176,Databricks,86,MLOps / Data Platform,USA,USA,Remote-friendly,Late-stage,5000+,https://databricks.com
+177,Snowflake,86,MLOps / Data Platform,USA,USA,Remote-friendly,Public,5000+,https://snowflake.com
+184,Rebellions,86,Infrastructure,South Korea,South Korea,Remote-friendly,Series C,201-500,https://rebellions.ai
+193,Vercel,86,Developer Tools,USA,USA,Remote-friendly,Series E+,501-1000,https://vercel.com
+202,Retool,86,Developer Tools,USA,USA,Remote-friendly,Series C,201-500,https://retool.com
+204,MongoDB,86,Infrastructure,USA,USA,Remote-friendly,Public,5000+,https://mongodb.com
+211,Dataiku,86,MLOps / Data Platform,France,France,Remote-friendly,Late-stage,1001-5000,https://dataiku.com
+229,Improbable,86,Infrastructure,UK,UK,Remote-friendly,Late-stage,501-1000,https://improbable.io
+256,BrowserStack,86,Developer Tools,India,India,Remote-friendly,Series B,1001-5000,https://browserstack.com
+269,Reddit,83,Public Tech,USA,USA,Remote-friendly,Public,1001-5000,https://reddit.com
+270,Pinterest,83,Public Tech,USA,USA,Remote-friendly,Public,1001-5000,https://pinterest.com
+271,Northflank,81,Cloud,UK,UK,Remote-first,Series A,1-50,https://northflank.com
+275,Qovery,81,Cloud,France,France,Remote-first,Seed,1-50,https://qovery.com
+276,Railway,81,Cloud,USA,USA,Remote-first,Series B,1-50,https://railway.com
+278,Fly.io,81,Cloud,USA,Global-Remote,Remote-first,Series C,51-200,https://fly.io
+280,DigitalOcean,81,Cloud,USA,Global-Remote,Remote-first,Public,1001-5000,https://digitalocean.com
+283,Sea Group,79,Public Tech,Singapore,Singapore,Hybrid,Public,5000+,https://sea.com
+284,Zalando,79,Public Tech,Germany,Germany,Hybrid,Public,5000+,https://zalando.com
+285,Coupang,79,Public Tech,USA,South Korea,Hybrid,Public,5000+,https://coupang.com
+286,Grab,79,Public Tech,Singapore,Singapore,Hybrid,Public,5000+,https://grab.com
+287,MercadoLibre,79,Public Tech,Argentina,Global-Remote,Hybrid,Public,5000+,https://mercadolibre.com
+288,Intuit,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://intuit.com
+289,Microsoft,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://microsoft.com
+290,Kakao,79,Public Tech,South Korea,South Korea,Hybrid,Public,5000+,https://kakaocorp.com
+291,Adobe,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://adobe.com
+292,Booking.com,79,Public Tech,Netherlands,Netherlands,Hybrid,Public,5000+,https://booking.com
+293,Naver,79,Public Tech,South Korea,South Korea,Hybrid,Public,5000+,https://navercorp.com
+294,Flipkart,79,Public Tech,India,India,Hybrid,Late-stage,5000+,https://flipkart.com
+295,Zomato (Eternal),79,Public Tech,India,India,Hybrid,Public,5000+,https://zomato.com
+296,Swiggy,79,Public Tech,India,India,Hybrid,Public,5000+,https://swiggy.com
+297,Meesho,79,Public Tech,India,India,Hybrid,Late-stage,1001-5000,https://meesho.com
+298,Apple,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://apple.com
+299,Google,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://google.com
+300,Property Finder,79,Public Tech,UAE,UAE,Hybrid,Late-stage,501-1000,https://propertyfinder.ae
+301,Careem,79,Public Tech,UAE,UAE,Hybrid,Corporate,1001-5000,https://careem.com
+302,Mercari,79,Public Tech,Japan,Japan,Hybrid,Public,1001-5000,https://mercari.com
+303,Carousell,79,Public Tech,Singapore,Singapore,Hybrid,Late-stage,1001-5000,https://carousell.com
+304,DoorDash,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://doordash.com
+305,Instacart,79,Public Tech,USA,USA,Hybrid,Public,1001-5000,https://instacart.com
+306,Netflix,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://netflix.com
+307,NVIDIA,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://nvidia.com
+308,Amazon,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://amazon.com
+309,Meta,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://meta.com
+310,Uber,79,Public Tech,USA,USA,Hybrid,Public,5000+,https://uber.com
+311,Cloudflare,77,Cloud,USA,USA,Remote-friendly,Public,1001-5000,https://cloudflare.com
+312,Fastly,77,Cloud,USA,USA,Remote-friendly,Public,1001-5000,https://fastly.com
+313,Render,77,Cloud,USA,USA,Remote-friendly,Series C,51-200,https://render.com
+314,Grafana Labs,76,Observability,USA,Global-Remote,Remote-first,Series D,1001-5000,https://grafana.com
+315,Honeycomb,76,Observability,USA,Global-Remote,Remote-first,Series D,201-500,https://honeycomb.io
+316,Cribl,76,Observability,USA,USA,Remote-first,Series E+,501-1000,https://cribl.io
+317,Better Stack,76,Observability,Czechia,Europe,Remote-first,Series A,51-200,https://betterstack.com
+318,SigNoz,76,Observability,India,Global-Remote,Remote-first,Series A,1-50,https://signoz.io
+324,OVHcloud,73,Cloud,France,France,Hybrid,Public,1001-5000,https://ovhcloud.com
+325,Lambda,73,Cloud,USA,USA,Hybrid,Late-stage,501-1000,https://lambda.ai
+326,Core42,73,Cloud,UAE,UAE,Hybrid,Private,501-1000,https://core42.ai
+327,Google Cloud,73,Cloud,USA,USA,Hybrid,Public,5000+,https://cloud.google.com
+328,Hetzner,73,Cloud,Germany,Germany,Hybrid,Private,501-1000,https://hetzner.com
+329,Amazon Web Services,73,Cloud,USA,USA,Hybrid,Public,5000+,https://aws.amazon.com
+330,CoreWeave,73,Cloud,USA,USA,Hybrid,Public,1001-5000,https://coreweave.com
+331,Scaleway,73,Cloud,France,France,Hybrid,Private,501-1000,https://scaleway.com
+333,Last9,72,Observability,India,India,Remote-friendly,Series A,51-200,https://last9.io
+334,Sentry,72,Observability,USA,USA,Remote-friendly,Series E+,201-500,https://sentry.io
+335,Chronosphere,72,Observability,USA,USA,Remote-friendly,Series D,501-1000,https://chronosphere.io
+336,Datadog,72,Observability,USA,USA,Remote-friendly,Public,5000+,https://datadoghq.com
