@@ -77,7 +77,7 @@ export default function Navbar() {
               alt="fyndkaro logo"
               className="w-9 h-9 rounded-xl object-cover ring-1 ring-orange-200/70 shadow-[0_8px_20px_-12px_rgba(249,115,22,0.8)] group-hover:shadow-[0_12px_26px_-12px_rgba(249,115,22,0.9)] transition-shadow"
             />
-            <span className="font-extrabold text-lg text-gray-900 hidden sm:block tracking-tight">fynd<span className="text-orange-500">kro</span></span>
+            <span className="font-extrabold text-lg text-gray-900 hidden sm:block tracking-tight">fynd<span className="text-orange-500">karo</span></span>
           </Link>
 
           {/* Desktop Nav */}
