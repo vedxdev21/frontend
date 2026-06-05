@@ -51,7 +51,7 @@ export default function RegisterPage() {
     setLoading(true);
     try {
       await authAPI.register({ name: form.name, phone: '+91' + form.phone, email: form.email || undefined, password: form.password, interests: form.interests });
-      toast.success('Registered! Verify OTP (use 123456 for demo)');
+      toast.success('Registration successful! Please verify the OTP sent to your phone.');
       setStep(2);
     } catch (err) {
       toast.error(err.response?.data?.error || 'Registration failed');
@@ -80,11 +80,11 @@ export default function RegisterPage() {
         <div className="text-center mb-8">
           <img
             src="/logo.png"
-            alt="fyndkro logo"
+            alt="fyndkaro logo"
             className="w-14 h-14 rounded-2xl object-cover mx-auto mb-4 border border-orange-100 shadow-md"
           />
           <h1 className="text-2xl font-extrabold text-gray-900">Create Account</h1>
-          <p className="text-sm text-gray-500 mt-1">Join fyndkro — it&apos;s free!</p>
+          <p className="text-sm text-gray-500 mt-1">Join fyndkaro — it&apos;s free!</p>
         </div>
 
         <div className="glass-panel p-6">

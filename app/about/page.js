@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-orange-500 to-amber-400 py-20 text-center">
         <div className="max-w-3xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">About fyndkro</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">About fyndkaro</h1>
           <p className="text-lg text-orange-100 max-w-xl mx-auto">
             India&apos;s first all-in-one platform to find rooms, roommates, mess, and cooks. Zero brokerage, always.
           </p>

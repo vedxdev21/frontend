@@ -60,7 +60,7 @@ export default function ProfileSetup() {
         <div className="max-w-md mx-auto px-4 py-12">
           <div className="text-center mb-8">
             <div className="text-5xl mb-4">\ud83d\udc4b</div>
-            <h1 className="text-2xl font-extrabold text-gray-900">Welcome to fyndkro!</h1>
+            <h1 className="text-2xl font-extrabold text-gray-900">Welcome to fyndkaro!</h1>
             <p className="text-sm text-gray-500 mt-1">Let&apos;s set up your profile</p>
           </div>
 

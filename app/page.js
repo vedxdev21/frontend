@@ -70,7 +70,7 @@ function ShowcaseCarousel({ t }) {
           <div className="w-3 h-3 rounded-full bg-green-500/80" />
         </div>
         <div className="flex-1 bg-slate-900/60 rounded-lg py-1 px-3 text-[10px] text-gray-400 font-mono text-center truncate select-none border border-white/5">
-          fyndkro.com/{['properties', 'roommate', 'mess', 'cook', 'community'][currentIndex]}
+          fyndkaro.com/{['properties', 'roommate', 'mess', 'cook', 'community'][currentIndex]}
         </div>
       </div>
       
@@ -91,7 +91,7 @@ function ShowcaseCarousel({ t }) {
             {/* Custom dark gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent flex flex-col justify-end p-5 text-white">
               <span className="text-[10px] font-extrabold uppercase tracking-wider text-orange-400 bg-orange-950/60 border border-orange-500/20 px-2 py-0.5 rounded w-max mb-1.5">
-                fyndkro Platform
+                fyndkaro Platform
               </span>
               <h3 className="text-lg md:text-xl font-bold leading-tight mb-1 drop-shadow-md">
                 {slide.title}

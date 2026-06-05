@@ -6,7 +6,7 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 export default function ErrorBoundary({ error, reset }) {
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error('[fyndkro Next.js Error]', error);
+    console.error('[fyndkaro Next.js Error]', error);
   }, [error]);
 
   return (

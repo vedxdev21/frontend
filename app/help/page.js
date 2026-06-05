@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function HelpPage() {
   const faqs = [
     { q: 'How do I list my property?', a: 'Click on the "List Property" button on the top right corner. Fill in the details, upload photos, and submit. Our team will verify and activate your listing.' },
-    { q: 'Is fyndkro completely free?', a: 'Yes! fyndkro is a 100% broker-free platform. We do not charge any brokerage from tenants or owners.' },
+    { q: 'Is fyndkaro completely free?', a: 'Yes! fyndkaro is a 100% broker-free platform. We do not charge any brokerage from tenants or owners.' },
     { q: 'How do I contact an owner?', a: 'Once you find a property you like, click on "Show Number" to view the owner\'s contact details, or use the in-app chat to send them a message.' },
     { q: 'Can I find roommates here?', a: 'Absolutely! Navigate to the Roommate section, create your profile, and start matching with compatible roommates based on your preferences.' },
     { q: 'How do I book a mess or tiffin service?', a: 'Go to the Mess section, browse local providers, check their menu and prices, and contact them directly to subscribe.' }
@@ -37,7 +37,7 @@ export default function HelpPage() {
             </div>
             <h3 className="font-bold text-gray-900 mb-1">Email Support</h3>
             <p className="text-sm text-gray-500 mb-3">Get answers within 24 hours</p>
-            <a href="mailto:support@fyndkro.com" className="text-sm font-semibold text-orange-500 hover:text-orange-600">support@fyndkro.com</a>
+            <a href="mailto:support@fyndkaro.com" className="text-sm font-semibold text-orange-500 hover:text-orange-600">support@fyndkaro.com</a>
           </div>
           
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">

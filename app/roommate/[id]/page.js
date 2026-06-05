@@ -77,7 +77,7 @@ export default function RoommateDetail() {
 
   const handleShare = () => {
     const url = typeof window !== 'undefined' ? window.location.href : '';
-    if (navigator.share) navigator.share({ title: `${profile?.name || 'Roommate'} on fyndkro`, url });
+    if (navigator.share) navigator.share({ title: `${profile?.name || 'Roommate'} on fyndkaro`, url });
     else { navigator.clipboard.writeText(url); toast.success('Link copied!'); }
   };
 

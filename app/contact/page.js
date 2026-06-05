@@ -19,7 +19,7 @@ export default function ContactPage() {
   };
 
   const faqs = [
-    { q: 'Is fyndkro free to use?', a: 'Yes! Listing and browsing is completely free. We charge zero brokerage.' },
+    { q: 'Is fyndkaro free to use?', a: 'Yes! Listing and browsing is completely free. We charge zero brokerage.' },
     { q: 'How do I list my property?', a: 'Sign up, go to Properties > List Property, fill in the details and publish.' },
     { q: 'How does roommate matching work?', a: 'We compare lifestyle preferences, budget, and habits to calculate a compatibility score.' },
     { q: 'Is my phone number safe?', a: 'Your number is hidden until you choose to share it via the Show Number feature.' },
@@ -71,7 +71,7 @@ export default function ContactPage() {
               <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center shrink-0">
                 <Mail className="w-5 h-5 text-orange-500" />
               </div>
-              <p className="text-sm font-semibold text-gray-900">support@fyndkro.in</p>
+              <p className="text-sm font-semibold text-gray-900">support@fyndkaro.in</p>
             </div>
             <div className="flex items-center gap-3 p-4 bg-orange-50/50 border border-orange-100/60 rounded-xl hover:bg-orange-50 transition-colors">
               <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center shrink-0">

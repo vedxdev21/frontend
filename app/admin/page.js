@@ -365,7 +365,7 @@ export default function AdminPanelPage() {
                     value={notificationForm.title}
                     onChange={(e) => setNotificationForm((prev) => ({ ...prev, title: e.target.value }))}
                     className="input-field"
-                    placeholder="Welcome to fyndkro"
+                    placeholder="Welcome to fyndkaro"
                   />
                 </div>
                 <div>

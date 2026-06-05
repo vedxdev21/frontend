@@ -33,7 +33,7 @@ export default function LoginPage() {
     setLoading(true);
     try {
       await authAPI.sendOtp({ phone: '+91' + phone });
-      toast.success('OTP sent! Use 123456 for demo.');
+      toast.success('OTP sent successfully!');
       setStep(2);
     } catch (err) {
       toast.error(err.response?.data?.error || 'Failed to send OTP');
@@ -99,11 +99,11 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <img
             src="/logo.png"
-            alt="fyndkro logo"
+            alt="fyndkaro logo"
             className="w-14 h-14 rounded-2xl object-cover mx-auto mb-4 border border-orange-100 shadow-md"
           />
           <h1 className="text-2xl font-extrabold text-gray-900">Welcome Back</h1>
-          <p className="text-sm text-gray-500 mt-1">Login to your fyndkro account</p>
+          <p className="text-sm text-gray-500 mt-1">Login to your fyndkaro account</p>
         </div>
 
         <div className="glass-panel p-6">

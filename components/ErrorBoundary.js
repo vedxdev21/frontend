@@ -14,7 +14,7 @@ export default class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('[fyndkro ErrorBoundary]', error, errorInfo);
+    console.error('[fyndkaro ErrorBoundary]', error, errorInfo);
   }
 
   render() {

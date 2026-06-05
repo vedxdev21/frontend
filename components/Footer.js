@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="mb-4 flex items-center gap-2">
               <img
                 src="/logo.png"
-                alt="fyndkro logo"
+                alt="fyndkaro logo"
                 className="w-9 h-9 rounded-xl object-cover ring-1 ring-orange-300/40 shadow-[0_10px_22px_-14px_rgba(249,115,22,0.9)]"
               />
               <span className="text-lg font-extrabold text-white">fynd<span className="text-orange-400">kro</span></span>
