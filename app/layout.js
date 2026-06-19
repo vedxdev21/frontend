@@ -38,7 +38,7 @@ const getGoogleClientId = () => {
   const backendEnvPath = path.join(process.cwd(), '..', 'masterX_backend', '.env')
   if (!fs.existsSync(backendEnvPath)) {
     // Return production fallback Client ID
-    return '1090504347867-nq5ptcsga8qi8cn95pp1tjqk5ebg056s.apps.googleusercontent.com'
+    return '776266173007-43f23mv0n0l9pn2o6jh5u4t66ag8u4jf.apps.googleusercontent.com'
   }
 
   const envFile = fs.readFileSync(backendEnvPath, 'utf8')
