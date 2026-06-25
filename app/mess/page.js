@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import EmptyState from '@/components/EmptyState';
 import { messAPI } from '@/lib/api';
 import { useLocationStore } from '@/lib/store';
+import { CITY_AREAS } from '@/lib/constants';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
 import { Star, MapPin, Heart, Bike, ChevronDown, Clock } from 'lucide-react';
@@ -121,11 +122,12 @@ function SkeletonCard() {
 }
 
 export default function MessBrowse() {
-  const { city, area } = useLocationStore();
+  const { city } = useLocationStore();
   const [isHydrated, setIsHydrated] = useState(false);
   const [messList, setMessList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState('All');
+  const [selectedArea, setSelectedArea] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [total, setTotal] = useState(0);
@@ -136,11 +138,16 @@ export default function MessBrowse() {
 
   const effectiveCity = isHydrated ? (city || 'Bhopal') : 'Bhopal';
 
+  // Reset local area filter when city changes
+  useEffect(() => {
+    setSelectedArea('');
+  }, [effectiveCity]);
+
   const fetchMess = useCallback(async (pageNum = 1, append = false) => {
     setLoading(true);
     try {
       const params = { city: effectiveCity, page: pageNum, limit: 12 };
-      if (area) params.area = area;
+      if (selectedArea) params.area = selectedArea;
       if (activeFilter === 'Veg') params.foodType = 'VEG';
       if (activeFilter === 'Non-Veg') params.foodType = 'NON_VEG';
       if (activeFilter === 'Delivery') params.delivery = 'true';
@@ -155,12 +162,12 @@ export default function MessBrowse() {
       toast.error('Failed to load mess listings');
     }
     setLoading(false);
-  }, [effectiveCity, area, activeFilter]);
+  }, [effectiveCity, selectedArea, activeFilter]);
 
   useEffect(() => {
     setPage(1);
     fetchMess(1);
-  }, [effectiveCity, activeFilter, fetchMess]);
+  }, [effectiveCity, selectedArea, activeFilter, fetchMess]);
 
   const loadMore = () => {
     if (page < totalPages) {
@@ -178,19 +185,35 @@ export default function MessBrowse() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="text-2xl font-extrabold text-gray-900"><span className="text-orange-500">{total || messList.length}</span> Mess in {area ? `${area}, ${effectiveCity}` : effectiveCity}</h1>
+            <h1 className="text-2xl font-extrabold text-gray-900"><span className="text-orange-500">{total || messList.length}</span> Mess in {selectedArea ? `${selectedArea}, ${effectiveCity}` : effectiveCity}</h1>
             <p className="text-sm text-gray-400 mt-0.5">Home-style meals near you</p>
           </div>
           <Link href="/mess/register" className="btn-primary text-sm">Register Your Mess</Link>
         </div>
 
-        <div className="flex gap-2 mb-6 overflow-x-auto scrollbar-hide">
-          {filters.map(f => (
-            <button key={f} onClick={() => setActiveFilter(f)}
-              className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
-                activeFilter === f ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-[0_6px_14px_-6px_rgba(249,115,22,0.7)]' : 'bg-white border border-orange-100 text-gray-600 hover:bg-orange-50 hover:text-orange-500'
-              }`}>{f}</button>
-          ))}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div className="flex gap-2 overflow-x-auto scrollbar-hide py-1">
+            {filters.map(f => (
+              <button key={f} onClick={() => setActiveFilter(f)}
+                className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
+                  activeFilter === f ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-[0_6px_14px_-6px_rgba(249,115,22,0.7)]' : 'bg-white border border-orange-100 text-gray-600 hover:bg-orange-50 hover:text-orange-500'
+                }`}>{f}</button>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0">
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Area:</span>
+            <select
+              value={selectedArea}
+              onChange={(e) => setSelectedArea(e.target.value)}
+              className="text-xs font-semibold bg-white border border-orange-100 text-gray-600 rounded-full px-3 py-1.5 outline-none cursor-pointer hover:bg-orange-50 hover:text-orange-500 transition-all shadow-sm"
+            >
+              <option value="">All Areas</option>
+              {CITY_AREAS[effectiveCity]?.map((a) => (
+                <option key={a} value={a}>{a}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
         {loading && messList.length === 0 ? (
