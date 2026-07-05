@@ -44,7 +44,7 @@ export default function PropertyCard({ property, onSaveToggle }) {
     <Link href={`/properties/${property?.id}`} className="block">
       <div className="card-hover overflow-hidden group hover:-translate-y-0.5 transition-all duration-300">
         {/* Image */}
-        <div className="relative aspect-[4/5] md:aspect-[16/10] overflow-hidden bg-gray-100">
+        <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
           <div
             className="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
             onScroll={handleImageScroll}

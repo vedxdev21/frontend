@@ -6,14 +6,27 @@ import { useAuth } from '@/context/AuthContext';
 import { useLangStore } from '@/lib/store';
 import { userAPI } from '@/lib/api';
 import toast from 'react-hot-toast';
-import { Settings as SettingsIcon, Bell, Shield, Globe, Moon, ChevronRight, LogOut } from 'lucide-react';
-import { useState } from 'react';
+import { Settings as SettingsIcon, Bell, Shield, Globe, Moon, ChevronRight, LogOut, Smartphone } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function SettingsPage() {
   const { user, logout } = useAuth();
   const { lang, setLang } = useLangStore();
   const [loading, setLoading] = useState(false);
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
+  const [mobileDefaultPage, setMobileDefaultPage] = useState('/');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setMobileDefaultPage(localStorage.getItem('mobileDefaultPage') || '/');
+    }
+  }, []);
+
+  const handleMobilePageChange = (val) => {
+    localStorage.setItem('mobileDefaultPage', val);
+    setMobileDefaultPage(val);
+    toast.success('Mobile landing page updated');
+  };
 
   const handleLanguageChange = async (newLang) => {
     setLoading(true);
@@ -43,6 +56,23 @@ export default function SettingsPage() {
             >
               <option value="en">English</option>
               <option value="hi">हिंदी (Hindi)</option>
+            </select>
+          )
+        },
+        {
+          icon: Smartphone,
+          label: 'Mobile Landing Page',
+          action: (
+            <select
+              value={mobileDefaultPage}
+              onChange={(e) => handleMobilePageChange(e.target.value)}
+              className="bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block p-2"
+            >
+              <option value="/">Default Home</option>
+              <option value="/properties">Properties</option>
+              <option value="/roommate">Roommates</option>
+              <option value="/mess">Mess</option>
+              <option value="/cook">Cooks</option>
             </select>
           )
         },

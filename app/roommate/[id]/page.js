@@ -154,9 +154,15 @@ export default function RoommateDetail() {
         {/* Profile Header */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-4">
           <div className="bg-gradient-to-br from-orange-500 to-amber-400 p-6 text-center">
-            <div className="w-28 h-28 rounded-full overflow-hidden mx-auto ring-4 ring-white/30 mb-3">
-              <img src={profile.photo || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face'}
-                alt={name} className="w-full h-full object-cover" />
+            <div className="w-28 h-28 rounded-full overflow-hidden mx-auto ring-4 ring-white/30 mb-3 flex items-center justify-center bg-white/20">
+              {profile.photo || profile.photos?.[0] ? (
+                <img src={profile.photo || profile.photos[0]}
+                  alt={name} className="w-full h-full object-cover" />
+              ) : (
+                <span className="text-white text-3xl font-extrabold">
+                  {name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+                </span>
+              )}
             </div>
             <h1 className="text-2xl font-extrabold text-white">{name}, {profile.age}</h1>
             <p className="text-orange-100 text-sm mt-1 flex items-center justify-center gap-1">

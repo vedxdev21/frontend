@@ -1,12 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useAuth } from '@/context/AuthContext';
 import { adminAPI } from '@/lib/api';
 import toast from 'react-hot-toast';
-import { CheckCircle2, XCircle, ShieldCheck, Home, Utensils, ChefHat, Users, Ban, Bell, Send, Clock, BadgeCheck } from 'lucide-react';
+import { CheckCircle2, XCircle, ShieldCheck, Home, Utensils, ChefHat, Users, Ban, Bell, Send, Clock, BadgeCheck, Plus, Edit3 } from 'lucide-react';
 
 export default function AdminPanelPage() {
   const router = useRouter();
@@ -169,11 +170,16 @@ export default function AdminPanelPage() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-        <div className="mb-6">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 flex items-center gap-2">
-            <ShieldCheck className="w-7 h-7 text-orange-500" /> Admin Approval Panel
-          </h1>
-          <p className="text-sm text-gray-500 mt-1">Approve listings before they go live on the platform.</p>
+        <div className="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 flex items-center gap-2">
+              <ShieldCheck className="w-7 h-7 text-orange-500" /> Admin Approval Panel
+            </h1>
+            <p className="text-sm text-gray-500 mt-1">Approve listings before they go live on the platform.</p>
+          </div>
+          <Link href="/properties/create" className="btn-primary inline-flex items-center gap-1.5 self-start md:self-auto">
+            <Plus className="w-4 h-4" /> Add Property
+          </Link>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-4 mb-6">
@@ -296,6 +302,12 @@ export default function AdminPanelPage() {
                     </p>
                   </div>
                   <div className="flex gap-2">
+                    <Link
+                      href={`/properties/edit/${p.id}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    >
+                      <Edit3 className="w-4 h-4" /> Edit
+                    </Link>
                     {p.status !== 'ACTIVE' && (
                       <button
                         onClick={() => withAction(() => adminAPI.approveProperty(p.id), 'Property approved')}

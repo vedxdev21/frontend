@@ -31,43 +31,47 @@ function CompatibilityRing({ score }) {
 
 function RoommateCard({ roommate }) {
   const [activeImage, setActiveImage] = useState(0);
-  const photos = roommate.photos?.length
-    ? roommate.photos
-    : [roommate.photo || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=700&fit=crop&crop=face'];
-
   const handleImageScroll = (e) => {
     const { scrollLeft, clientWidth } = e.currentTarget;
     if (!clientWidth) return;
     setActiveImage(Math.round(scrollLeft / clientWidth));
   };
+  const name = roommate.name || roommate.user?.name || 'Roommate';
+  const hasPhoto = roommate.photos?.length > 0 || roommate.photo;
 
   return (
     <Link href={`/roommate/${roommate.id}`}>
       <div className="card-hover overflow-hidden text-center group">
         <div className="relative aspect-[4/5] bg-gray-100 overflow-hidden">
-          <div className="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide" onScroll={handleImageScroll}>
-            {photos.map((photo, idx) => (
-              <img
-                key={`${roommate.id || 'roommate'}-${idx}`}
-                src={photo}
-                alt={`${roommate.name || roommate.user?.name || 'Roommate'} ${idx + 1}`}
-                className="h-full w-full shrink-0 snap-center object-cover"
-                onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=700&fit=crop&crop=face';
-                }}
-              />
-            ))}
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/0 to-transparent" />
-          {photos.length > 1 && (
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-black/35 backdrop-blur-sm">
-              {photos.map((_, idx) => (
-                <span
-                  key={idx}
-                  className={`h-1.5 rounded-full transition-all ${activeImage === idx ? 'w-4 bg-white' : 'w-1.5 bg-white/65'}`}
-                />
-              ))}
+          {hasPhoto ? (
+            <>
+              <div className="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide" onScroll={handleImageScroll}>
+                {(roommate.photos || [roommate.photo]).map((photo, idx) => (
+                  <img
+                    key={`${roommate.id || 'roommate'}-${idx}`}
+                    src={photo}
+                    alt={`${name} ${idx + 1}`}
+                    className="h-full w-full shrink-0 snap-center object-cover"
+                  />
+                ))}
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/0 to-transparent" />
+              {roommate.photos?.length > 1 && (
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-black/35 backdrop-blur-sm">
+                  {roommate.photos.map((_, idx) => (
+                    <span
+                      key={idx}
+                      className={`h-1.5 rounded-full transition-all ${activeImage === idx ? 'w-4 bg-white' : 'w-1.5 bg-white/65'}`}
+                    />
+                  ))}
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-100 via-orange-50 to-amber-100">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-white text-2xl font-extrabold shadow-lg border-4 border-white">
+                {name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+              </div>
             </div>
           )}
         </div>

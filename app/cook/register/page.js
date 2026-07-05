@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import ProtectedRoute from '@/components/ProtectedRoute';
@@ -14,6 +14,9 @@ export default function RegisterCook() {
   const [step, setStep] = useState(0);
   const [loading, setLoading] = useState(false);
   const { upload, loading: uploading } = useUpload();
+  const [cookId, setCookId] = useState(null);
+  const [customAreaInput, setCustomAreaInput] = useState('');
+  const [customAreas, setCustomAreas] = useState([]);
 
   const [form, setForm] = useState({
     fullName: '', photo: '', gender: 'FEMALE', age: '', experience: '',
@@ -23,6 +26,38 @@ export default function RegisterCook() {
     serviceAreas: [], city: 'Bhopal', pincode: '',
     availableSlots: { morning: '6:00-10:00', evening: '17:00-21:00' },
   });
+
+  useEffect(() => {
+    cookAPI.getDashboard()
+      .then(({ data }) => {
+        const cook = data.dashboard?.cook || data.cook || data;
+        if (cook && cook.id) {
+          setCookId(cook.id);
+          setForm({
+            fullName: cook.fullName || '',
+            photo: cook.photo || '',
+            gender: cook.gender || 'FEMALE',
+            age: cook.age?.toString() || '',
+            experience: cook.experience?.toString() || '',
+            speciality: cook.speciality || 'VEG',
+            cuisineTypes: cook.cuisineTypes || [],
+            serviceTypes: cook.serviceTypes || ['DAILY_COOK'],
+            pricePerVisit: cook.pricePerVisit?.toString() || '',
+            monthlyOneMeal: cook.monthlyOneMeal?.toString() || '',
+            monthlyTwoMeals: cook.monthlyTwoMeals?.toString() || '',
+            serviceAreas: cook.serviceAreas || [],
+            city: cook.city || 'Bhopal',
+            pincode: cook.pincode || '',
+            availableSlots: cook.availableSlots || { morning: '6:00-10:00', evening: '17:00-21:00' },
+          });
+          const defaultAreas = CITY_AREAS[cook.city || 'Bhopal'] || [];
+          const customOnes = (cook.serviceAreas || []).filter(a => !defaultAreas.includes(a));
+          setCustomAreas(customOnes);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   const areas = CITY_AREAS[form.city] || [];
 
   const update = (key, value) => setForm(prev => ({ ...prev, [key]: value }));
@@ -68,10 +103,15 @@ export default function RegisterCook() {
         monthlyOneMeal: parseInt(form.monthlyOneMeal) || undefined,
         monthlyTwoMeals: parseInt(form.monthlyTwoMeals) || undefined,
       };
-      await cookAPI.register(data);
-      toast.success('Cook profile registered!');
+      if (cookId) {
+        await cookAPI.update(cookId, data);
+        toast.success('Cook profile updated!');
+      } else {
+        await cookAPI.register(data);
+        toast.success('Cook profile registered!');
+      }
       router.push('/cook/dashboard');
-    } catch (err) { toast.error(err.response?.data?.error || 'Failed to register'); }
+    } catch (err) { toast.error(err.response?.data?.error || err.response?.data?.message || 'Failed to save'); }
     setLoading(false);
   };
 
@@ -190,15 +230,45 @@ export default function RegisterCook() {
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-3">
                   <div><label className="text-sm font-medium text-gray-700 mb-1.5 block">City *</label>
-                    <select value={form.city} onChange={e => { update('city', e.target.value); update('serviceAreas', []); }} className="input-field">{CITIES.map(c => <option key={c} value={c}>{c}</option>)}</select></div>
+                    <select value={form.city} onChange={e => { update('city', e.target.value); update('serviceAreas', []); setCustomAreas([]); }} className="input-field">{CITIES.map(c => <option key={c} value={c}>{c}</option>)}</select></div>
                   <div><label className="text-sm font-medium text-gray-700 mb-1.5 block">Pincode</label>
                     <input type="text" value={form.pincode} onChange={e => update('pincode', e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="462011" className="input-field" maxLength={6} /></div>
                 </div>
                 <div><label className="text-sm font-medium text-gray-700 mb-2 block">Service Areas (select multiple)</label>
                   <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto">
-                    {areas.map(a => (
+                    {[...areas, ...customAreas].map(a => (
                       <button key={a} onClick={() => toggleArr('serviceAreas', a)} className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${form.serviceAreas.includes(a) ? 'bg-orange-500 text-white border-orange-500' : 'bg-white text-gray-600 border-gray-200'}`}>{a}</button>
                     ))}
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <label className="text-sm font-medium text-gray-700 mb-1.5 block">Or Add Custom Service Area</label>
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={customAreaInput}
+                      onChange={e => setCustomAreaInput(e.target.value)}
+                      placeholder="Type custom area name"
+                      className="input-field flex-1"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const val = customAreaInput.trim();
+                        if (!val) return;
+                        if (!form.serviceAreas.includes(val)) {
+                          update('serviceAreas', [...form.serviceAreas, val]);
+                        }
+                        if (!customAreas.includes(val)) {
+                          setCustomAreas(prev => [...prev, val]);
+                        }
+                        setCustomAreaInput('');
+                        toast.success(`Added "${val}" to service areas`);
+                      }}
+                      className="btn-primary !py-2 !px-4 text-sm"
+                    >
+                      Add
+                    </button>
                   </div>
                 </div>
               </div>

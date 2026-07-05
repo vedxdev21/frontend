@@ -139,7 +139,17 @@ export default function LandingPage() {
   const { city, area, setLocation } = useLocationStore();
   const { lang } = useLangStore();
   const [isHydrated, setIsHydrated] = useState(false);
-  useEffect(() => { setIsHydrated(true); }, []);
+
+  useEffect(() => {
+    setIsHydrated(true);
+    if (typeof window !== 'undefined') {
+      const isMobile = window.innerWidth < 768;
+      const mobileTarget = localStorage.getItem('mobileDefaultPage');
+      if (isMobile && mobileTarget && mobileTarget !== '/') {
+        router.replace(mobileTarget);
+      }
+    }
+  }, [router]);
   const displayLang = isHydrated ? lang : 'en';
   const { t } = useTranslation(displayLang);
 
