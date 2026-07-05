@@ -75,7 +75,7 @@ export default function PropertyCard({ property, onSaveToggle }) {
                 <Sparkles className="w-3 h-3" /> Featured
               </span>
             )}
-            {property?.negotiable && (
+            {property?.negotiable === 'NEGOTIABLE' && (
               <span className="px-2 py-0.5 bg-blue-500 text-white text-[10px] font-bold rounded-full">Negotiable</span>
             )}
           </div>

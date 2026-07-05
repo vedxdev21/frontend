@@ -197,7 +197,7 @@ export default function PropertyDetail() {
           {property.deposit > 0 && (
             <span className="text-sm text-gray-500 ml-2">Deposit: ₹{(property.deposit || 0).toLocaleString('en-IN')}</span>
           )}
-          {property.negotiable && (
+          {property.negotiable === 'NEGOTIABLE' && (
             <span className="px-2 py-0.5 bg-blue-100 text-blue-600 text-xs font-bold rounded-full ml-2">Negotiable</span>
           )}
         </div>
@@ -265,14 +265,31 @@ export default function PropertyDetail() {
         <div className="mb-8">
           <h3 className="font-bold text-gray-900 mb-3">Owner</h3>
           <div className="bg-white rounded-xl border border-gray-100 p-4 flex items-center gap-4">
-            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-              <span className="text-orange-600 font-bold text-lg">{property.ownerName?.charAt(0) || 'O'}</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden bg-orange-100 flex items-center justify-center">
+              {property?.owner?.profilePhoto ? (
+                <img src={property.owner.profilePhoto} alt={property?.owner?.name || property?.ownerName || 'Property Owner'} className="w-full h-full object-cover" />
+              ) : (
+                <span className="text-orange-600 font-bold text-lg">
+                  {(property?.owner?.name || property?.ownerName || 'Property Owner')
+                    .split(' ')
+                    .map((n) => n[0])
+                    .join('')
+                    .slice(0, 2)
+                    .toUpperCase()}
+                </span>
+              )}
             </div>
             <div>
-              <p className="font-semibold text-gray-900">{property.ownerName || 'Property Owner'}</p>
+              <p className="font-semibold text-gray-900">{property?.owner?.name || property?.ownerName || 'Property Owner'}</p>
               <div className="flex items-center gap-2 text-sm text-gray-500">
-                {property.verified && <span className="flex items-center gap-1 text-green-500"><BadgeCheck className="w-3.5 h-3.5" /> Verified</span>}
-                <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> Member since 2024</span>
+                {property?.owner?.isPhoneVerified && (
+                  <span className="flex items-center gap-1 text-green-500">
+                    <BadgeCheck className="w-3.5 h-3.5" /> Verified
+                  </span>
+                )}
+                <span className="flex items-center gap-1">
+                  <Clock className="w-3.5 h-3.5" /> Member since {property?.owner?.createdAt ? new Date(property.owner.createdAt).getFullYear() : '2024'}
+                </span>
               </div>
             </div>
           </div>
