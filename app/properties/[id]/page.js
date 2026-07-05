@@ -188,7 +188,7 @@ export default function PropertyDetail() {
           <MapPin className="w-4 h-4 text-orange-400" />
           <span>{property.area}, {property.city}</span>
           <span className="text-gray-300">|</span>
-          <Eye className="w-4 h-4" /> <span>{property.views} views</span>
+          <Eye className="w-4 h-4" /> <span>{property.viewCount || property.views || 0} views</span>
         </div>
 
         <div className="flex items-baseline gap-2 mb-6">

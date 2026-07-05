@@ -87,9 +87,9 @@ export default function PropertyCard({ property, onSaveToggle }) {
             </button>
           </div>
           {/* Views */}
-          {property?.views > 0 && (
+          {(property?.viewCount > 0 || property?.views > 0) && (
             <div className="absolute bottom-3 right-3 flex items-center gap-1 px-2 py-0.5 bg-black/50 text-white text-[10px] rounded-full">
-              <Eye className="w-3 h-3" /> {property.views}
+              <Eye className="w-3 h-3" /> {property.viewCount || property.views}
             </div>
           )}
           {photos.length > 1 && (
