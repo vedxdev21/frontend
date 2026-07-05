@@ -89,9 +89,14 @@ export default function RoommateInterests() {
                   <div key={interest.id} className="bg-white rounded-xl border border-gray-100 p-4">
                     <div className="flex items-start gap-4">
                       <Link href={`/roommate/${profile.id}`}>
-                        <div className="w-14 h-14 rounded-full overflow-hidden bg-gray-100 ring-2 ring-orange-200 shrink-0">
-                          <img src={profile.photo || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'}
-                            alt={name} className="w-full h-full object-cover" />
+                        <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-orange-200 shrink-0 bg-orange-100 flex items-center justify-center">
+                          {profile.photo ? (
+                            <img src={profile.photo} alt={name} className="w-full h-full object-cover" />
+                          ) : (
+                            <span className="text-orange-600 font-extrabold text-sm">
+                              {name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+                            </span>
+                          )}
                         </div>
                       </Link>
                       <div className="flex-1 min-w-0">
