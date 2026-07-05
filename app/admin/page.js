@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import { useAuth } from '@/context/AuthContext';
 import { adminAPI } from '@/lib/api';
 import toast from 'react-hot-toast';
-import { CheckCircle2, XCircle, ShieldCheck, Home, Utensils, ChefHat, Users, Ban, Bell, Send, Clock, BadgeCheck, Plus, Edit3 } from 'lucide-react';
+import { CheckCircle2, XCircle, ShieldCheck, Home, Utensils, ChefHat, Users, Ban, Bell, Send, Clock, BadgeCheck, Plus, Edit3, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function AdminPanelPage() {
   const router = useRouter();
@@ -15,6 +15,14 @@ export default function AdminPanelPage() {
   const [tab, setTab] = useState('properties');
   const [stats, setStats] = useState(null);
   const [users, setUsers] = useState([]);
+  const [userSearch, setUserSearch] = useState('');
+  const [userPage, setUserPage] = useState(1);
+  const [userTotalPages, setUserTotalPages] = useState(1);
+
+  const handleSearchChange = (val) => {
+    setUserSearch(val);
+    setUserPage(1);
+  };
   const [properties, setProperties] = useState([]);
   const [messListings, setMessListings] = useState([]);
   const [cookListings, setCookListings] = useState([]);
@@ -38,7 +46,7 @@ export default function AdminPanelPage() {
     setPageLoading(true);
     const requests = await Promise.allSettled([
       adminAPI.dashboard(),
-      adminAPI.getUsers({ page: 1, limit: 25 }),
+      adminAPI.getUsers({ page: userPage, limit: 12, search: userSearch }),
       adminAPI.getProperties({
         ...(propertyStatusFilter === 'ALL' ? {} : { status: propertyStatusFilter }),
         page: 1,
@@ -61,6 +69,7 @@ export default function AdminPanelPage() {
 
     if (usersRes.status === 'fulfilled') {
       setUsers(getList(usersRes.value.data, 'users'));
+      setUserTotalPages(usersRes.value?.data?.totalPages || usersRes.value?.data?.meta?.totalPages || 1);
     } else {
       failedCount += 1;
       setUsers([]);
@@ -106,7 +115,7 @@ export default function AdminPanelPage() {
     if (!loading && isAuthenticated && isAdmin) {
       loadData();
     }
-  }, [loading, isAuthenticated, isAdmin, router, propertyStatusFilter]);
+  }, [loading, isAuthenticated, isAdmin, router, propertyStatusFilter, userPage, userSearch]);
 
   const withAction = async (fn, successMessage) => {
     setBusy(true);
@@ -213,53 +222,104 @@ export default function AdminPanelPage() {
         {pageLoading ? (
           <div className="glass-panel p-10 text-center text-sm text-gray-500">Loading admin data...</div>
         ) : tab === 'users' ? (
-          <div className="space-y-3">
-            {users.length === 0 ? (
-              <div className="glass-panel p-10 text-center text-sm text-gray-500">No users found.</div>
-            ) : (
-              users.map((account) => (
-                <div key={account.id} className="glass-panel p-4 flex flex-col sm:flex-row gap-4 sm:items-center justify-between">
-                  <div>
-                    <p className="font-bold text-gray-900">{account.name || 'Unnamed User'}</p>
-                    <p className="text-xs text-gray-500 mt-0.5">{account.phone} {account.email ? `· ${account.email}` : ''}</p>
-                    <div className="mt-2 flex flex-wrap items-center gap-1.5">
-                      <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 text-[10px] font-semibold">{account.role}</span>
-                      {account.city && <span className="px-2 py-0.5 rounded-full bg-orange-50 text-orange-600 text-[10px] font-semibold">{account.city}</span>}
-                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${account.isPhoneVerified ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>
-                        {account.isPhoneVerified ? 'Verified' : 'Pending'}
-                      </span>
-                      {account.isBlocked && <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-[10px] font-semibold">Blocked</span>}
+          <div className="space-y-4">
+            {/* Search Input */}
+            <div className="glass-panel p-4 flex flex-col md:flex-row gap-3 items-center justify-between">
+              <div className="relative w-full md:w-80">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search by name, phone, or email..."
+                  value={userSearch}
+                  onChange={(e) => handleSearchChange(e.target.value)}
+                  className="input-field pl-9 w-full !py-2 text-sm"
+                />
+                {userSearch && (
+                  <button
+                    onClick={() => handleSearchChange('')}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-xs"
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
+              <div className="text-xs text-gray-500 font-medium bg-gray-50 px-2.5 py-1 rounded-md border border-gray-100">
+                Found {users.length} user{users.length !== 1 ? 's' : ''} on this page
+              </div>
+            </div>
+
+            {/* Users List */}
+            <div className="space-y-3">
+              {users.length === 0 ? (
+                <div className="glass-panel p-10 text-center text-sm text-gray-500">No users found.</div>
+              ) : (
+                users.map((account) => (
+                  <div key={account.id} className="glass-panel p-4 flex flex-col sm:flex-row gap-4 sm:items-center justify-between">
+                    <div>
+                      <p className="font-bold text-gray-900">{account.name || 'Unnamed User'}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{account.phone} {account.email ? `· ${account.email}` : ''}</p>
+                      <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                        <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 text-[10px] font-semibold">{account.role}</span>
+                        {account.city && <span className="px-2 py-0.5 rounded-full bg-orange-50 text-orange-600 text-[10px] font-semibold">{account.city}</span>}
+                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${account.isPhoneVerified ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>
+                          {account.isPhoneVerified ? 'Verified' : 'Pending'}
+                        </span>
+                        {account.isBlocked && <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-700 text-[10px] font-semibold">Blocked</span>}
+                      </div>
+                      {account.createdAt && (
+                        <p className="text-[10px] text-gray-400 mt-2 flex items-center gap-1">
+                          <Clock className="w-3 h-3" /> Joined {new Date(account.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </p>
+                      )}
                     </div>
-                    {account.createdAt && (
-                      <p className="text-[10px] text-gray-400 mt-2 flex items-center gap-1">
-                        <Clock className="w-3 h-3" /> Joined {new Date(account.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
-                      </p>
-                    )}
-                  </div>
-                  <div className="flex gap-2">
-                    {!account.isPhoneVerified && (
+                    <div className="flex gap-2">
+                      {!account.isPhoneVerified && (
+                        <button
+                          onClick={() => withAction(() => adminAPI.verifyUser(account.id), 'User verified')}
+                          disabled={busy}
+                          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-green-100 text-green-700 hover:bg-green-200"
+                        >
+                          <CheckCircle2 className="w-4 h-4" /> Verify
+                        </button>
+                      )}
                       <button
-                        onClick={() => withAction(() => adminAPI.verifyUser(account.id), 'User verified')}
+                        onClick={() => withAction(() => adminAPI.blockUser(account.id, { block: !account.isBlocked }), account.isBlocked ? 'User unblocked' : 'User blocked')}
                         disabled={busy}
-                        className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-green-100 text-green-700 hover:bg-green-200"
+                        className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold ${
+                          account.isBlocked
+                            ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'
+                            : 'bg-red-100 text-red-700 hover:bg-red-200'
+                        }`}
                       >
-                        <CheckCircle2 className="w-4 h-4" /> Verify
+                        <Ban className="w-4 h-4" /> {account.isBlocked ? 'Unblock' : 'Block'}
                       </button>
-                    )}
-                    <button
-                      onClick={() => withAction(() => adminAPI.blockUser(account.id, { block: !account.isBlocked }), account.isBlocked ? 'User unblocked' : 'User blocked')}
-                      disabled={busy}
-                      className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold ${
-                        account.isBlocked
-                          ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'
-                          : 'bg-red-100 text-red-700 hover:bg-red-200'
-                      }`}
-                    >
-                      <Ban className="w-4 h-4" /> {account.isBlocked ? 'Unblock' : 'Block'}
-                    </button>
+                    </div>
                   </div>
-                </div>
-              ))
+                ))
+              )}
+            </div>
+
+            {/* Pagination Controls */}
+            {userTotalPages > 1 && (
+              <div className="flex items-center justify-center gap-4 mt-6 pt-4 border-t border-gray-100">
+                <button
+                  disabled={userPage <= 1 || busy}
+                  onClick={() => setUserPage((p) => Math.max(1, p - 1))}
+                  className="p-2 rounded-lg border border-gray-200 bg-white text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <span className="text-sm font-semibold text-gray-700">
+                  Page {userPage} of {userTotalPages}
+                </span>
+                <button
+                  disabled={userPage >= userTotalPages || busy}
+                  onClick={() => setUserPage((p) => Math.min(userTotalPages, p + 1))}
+                  className="p-2 rounded-lg border border-gray-200 bg-white text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
             )}
           </div>
         ) : tab === 'properties' ? (
