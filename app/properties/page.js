@@ -221,10 +221,10 @@ export default function PropertiesBrowse() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-12">
         {loading && properties.length === 0 ? (
             <div className={`${view === 'grid'
-              ? 'flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+              ? 'grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
               : 'grid gap-5 grid-cols-1'}`}>
               {[...Array(8)].map((_, i) => (
-                <div key={i} className={view === 'grid' ? 'min-w-[86vw] max-w-[86vw] snap-center sm:min-w-0 sm:max-w-none' : ''}>
+                <div key={i}>
                   <div className="glass-panel rounded-2xl overflow-hidden">
                     <div className="aspect-[16/10] bg-gray-200 animate-pulse" />
                     <div className="p-4 space-y-3">
@@ -238,7 +238,7 @@ export default function PropertiesBrowse() {
             </div>
         ) : properties.length === 0 ? (
           <EmptyState
-            icon="\ud83c\udfe0"
+            icon="🏠"
             title={`No listings in ${filters.city}`}
             description={`We're growing in ${filters.city}! Be the first to list here.`}
             ctaLabel="List Your Property"
@@ -247,9 +247,9 @@ export default function PropertiesBrowse() {
         ) : (
           <>
             {view === 'grid' ? (
-              <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {properties.map((p) => (
-                  <div key={p.id} className="min-w-[86vw] max-w-[86vw] snap-center sm:min-w-0 sm:max-w-none">
+                  <div key={p.id}>
                     <PropertyCard property={p} />
                   </div>
                 ))}
