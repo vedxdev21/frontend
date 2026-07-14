@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   Sparkles,
   Users,
+  X,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -139,6 +140,7 @@ export default function LandingPage() {
   const { city, area, setLocation } = useLocationStore();
   const { lang } = useLangStore();
   const [isHydrated, setIsHydrated] = useState(false);
+  const [showSearchModal, setShowSearchModal] = useState(false);
 
   useEffect(() => {
     setIsHydrated(true);
@@ -179,8 +181,13 @@ export default function LandingPage() {
       toast.error(displayLang === 'hi' ? 'कृपया एक शहर चुनें' : 'Please select a city');
       return;
     }
+    setShowSearchModal(true);
+  };
+
+  const handleSelectService = (href) => {
     setLocation({ city: searchCity, area: '' });
-    router.push('/properties');
+    setShowSearchModal(false);
+    router.push(href);
   };
 
   return (
@@ -405,6 +412,50 @@ export default function LandingPage() {
 
         <Footer />
       </div>
+
+      {/* Search Options Modal */}
+      {showSearchModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md transition-opacity duration-300">
+          <div className="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-orange-100 animate-in fade-in zoom-in-95 duration-200">
+            {/* Modal Header */}
+            <div className="relative px-6 py-5 bg-gradient-to-r from-orange-500 to-amber-500 text-white flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-black tracking-tight">
+                  {displayLang === 'hi' ? `आप ${searchCity} में क्या ढूँढ रहे हैं?` : `What are you looking for in ${searchCity}?`}
+                </h3>
+                <p className="text-xs text-orange-100 mt-1">
+                  {displayLang === 'hi' ? 'जारी रखने के लिए एक सेवा चुनें' : 'Select a service to continue'}
+                </p>
+              </div>
+              <button
+                onClick={() => setShowSearchModal(false)}
+                className="p-1.5 rounded-full bg-white/20 hover:bg-white/35 transition-colors text-white outline-none"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 grid gap-4 grid-cols-1 sm:grid-cols-2">
+              {serviceCards.map(({ title, desc, icon: Icon, href }) => (
+                <button
+                  key={title}
+                  onClick={() => handleSelectService(href)}
+                  className="flex items-start gap-4 p-4 rounded-2xl bg-orange-50/30 hover:bg-orange-50 border border-orange-100 hover:border-orange-300 transition-all text-left group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-gray-800 text-base mb-1">{title}</h4>
+                    <p className="text-xs text-gray-500 leading-normal">{desc}</p>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
