@@ -187,9 +187,9 @@ export default function RoommateBrowse() {
         </div>
 
         {loading && profiles.length === 0 ? (
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="min-w-[82vw] max-w-[82vw] snap-center sm:min-w-0 sm:max-w-none">
+              <div key={i}>
                 <SkeletonCard />
               </div>
             ))}
@@ -199,9 +199,9 @@ export default function RoommateBrowse() {
             ctaLabel="Create Profile" ctaHref="/roommate/create-profile" />
         ) : (
           <>
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
               {profiles.map((r) => (
-                <div key={r.id} className="min-w-[82vw] max-w-[82vw] snap-center sm:min-w-0 sm:max-w-none">
+                <div key={r.id}>
                   <RoommateCard roommate={r} />
                 </div>
               ))}

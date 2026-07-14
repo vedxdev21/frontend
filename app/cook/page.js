@@ -203,9 +203,9 @@ export default function CookBrowse() {
         </div>
 
         {loading && cooks.length === 0 ? (
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:flex-col md:gap-3">
+          <div className="flex flex-col gap-3">
             {[...Array(5)].map((_, i) => (
-              <div key={i} className="min-w-[86vw] max-w-[86vw] snap-center md:min-w-0 md:max-w-none">
+              <div key={i}>
                 <SkeletonCard />
               </div>
             ))}
@@ -216,9 +216,9 @@ export default function CookBrowse() {
             ctaLabel="Register as Cook" ctaHref="/cook/register" />
         ) : (
           <>
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:flex-col md:gap-3">
+            <div className="flex flex-col gap-3">
               {cooks.map((c) => (
-                <div key={c.id} className="min-w-[86vw] max-w-[86vw] snap-center md:min-w-0 md:max-w-none">
+                <div key={c.id}>
                   <CookCard cook={c} />
                 </div>
               ))}

@@ -217,9 +217,9 @@ export default function MessBrowse() {
         </div>
 
         {loading && messList.length === 0 ? (
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="min-w-[86vw] max-w-[86vw] snap-center sm:min-w-0 sm:max-w-none">
+              <div key={i}>
                 <SkeletonCard />
               </div>
             ))}
@@ -230,9 +230,9 @@ export default function MessBrowse() {
             ctaLabel="Register Mess" ctaHref="/mess/register" />
         ) : (
           <>
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {messList.map((m) => (
-                <div key={m.id} className="min-w-[86vw] max-w-[86vw] snap-center sm:min-w-0 sm:max-w-none">
+                <div key={m.id}>
                   <MessCard mess={m} />
                 </div>
               ))}
