@@ -40,13 +40,12 @@ export default function PropertiesBrowse() {
   useEffect(() => {
     if (!isHydrated) return;
     const nextCity = city || 'Bhopal';
-    setFilters(prev => (prev.city === nextCity ? prev : { ...prev, city: nextCity }));
-  }, [isHydrated, city]);
-
-  useEffect(() => {
-    if (!isHydrated) return;
-    setFilters((prev) => (prev.area === (area || '') ? prev : { ...prev, area: area || '' }));
-  }, [isHydrated, area]);
+    const nextArea = area || '';
+    setFilters(prev => {
+      if (prev.city === nextCity && prev.area === nextArea) return prev;
+      return { ...prev, city: nextCity, area: nextArea };
+    });
+  }, [isHydrated, city, area]);
 
   const fetchProperties = useCallback(async (pageNum = 1, append = false) => {
     setLoading(true);
@@ -75,9 +74,10 @@ export default function PropertiesBrowse() {
   }, [filters]);
 
   useEffect(() => {
+    if (!isHydrated) return;
     setPage(1);
     fetchProperties(1);
-  }, [filters.city, filters.type, filters.area, filters.furnishing, filters.availableFor, filters.budgetMin, filters.budgetMax, filters.verified, filters.negotiable, filters.sort]);
+  }, [isHydrated, filters.city, filters.type, filters.area, filters.furnishing, filters.availableFor, filters.budgetMin, filters.budgetMax, filters.verified, filters.negotiable, filters.sort]);
 
   const loadMore = () => {
     if (page < totalPages) {
