@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import {
   ArrowRight,
   BellRing,
+  Building,
   ChefHat,
   Compass,
   Home,
@@ -12,6 +13,7 @@ import {
   ShieldCheck,
   Sparkles,
   Users,
+  UtensilsCrossed,
   X,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -164,9 +166,9 @@ export default function LandingPage() {
   }, [isHydrated, city]);
 
   const serviceCards = [
-    { title: t('cardRoomsTitle'), desc: t('cardRoomsDesc'), icon: Home, href: '/properties' },
+    { title: t('cardRoomsTitle'), desc: t('cardRoomsDesc'), icon: Building, href: '/properties' },
     { title: t('cardRoommateTitle'), desc: t('cardRoommateDesc'), icon: Users, href: '/roommate' },
-    { title: t('cardMessTitle'), desc: t('cardMessDesc'), icon: BellRing, href: '/mess' },
+    { title: t('cardMessTitle'), desc: t('cardMessDesc'), icon: UtensilsCrossed, href: '/mess' },
     { title: t('cardCookTitle'), desc: t('cardCookDesc'), icon: ChefHat, href: '/cook' },
   ];
 

@@ -96,12 +96,12 @@ export default function MyListings() {
           </div>
 
           {/* Tabs */}
-          <div className="flex gap-1 bg-gray-100 rounded-xl p-1 mb-6">
+          <div className="flex gap-1 bg-gray-100 rounded-xl p-1 mb-6 overflow-x-auto scrollbar-hide whitespace-nowrap">
             {tabs.map(t => {
               const Icon = t.icon;
               return (
                 <button key={t.key} onClick={() => setTab(t.key)}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium flex-1 justify-center transition-colors ${
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-colors shrink-0 sm:flex-1 justify-center ${
                     tab === t.key ? 'bg-white text-orange-500 shadow-sm' : 'text-gray-500 hover:text-gray-700'
                   }`}>
                   <Icon className="w-4 h-4" /> {t.label}

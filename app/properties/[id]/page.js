@@ -298,26 +298,28 @@ export default function PropertyDetail() {
 
       {/* Sticky Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 z-50 md:max-w-4xl md:mx-auto">
-        <div className="flex items-center justify-between">
-          <div>
-            <span className="text-xl font-extrabold text-gray-900">₹{(property.rent || 0).toLocaleString('en-IN')}</span>
-            <span className="text-sm text-gray-400">/month</span>
+        <div className="flex items-center justify-between gap-4">
+          <div className="shrink-0">
+            <span className="text-lg sm:text-xl font-extrabold text-gray-900">₹{(property.rent || 0).toLocaleString('en-IN')}</span>
+            <span className="text-xs sm:text-sm text-gray-400">/mo</span>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-1 justify-end min-w-0">
             {showNumber ? (
               <button onClick={handleCopyNumber}
-                className="flex items-center gap-1.5 px-4 py-2.5 bg-green-500 text-white rounded-xl text-sm font-semibold">
-                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                {showNumber}
+                className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 bg-green-500 text-white rounded-xl text-xs sm:text-sm font-semibold flex-1 sm:flex-initial min-w-0">
+                {copied ? <Check className="w-4 h-4 shrink-0" /> : <Copy className="w-4 h-4 shrink-0" />}
+                <span className="truncate">{showNumber}</span>
               </button>
             ) : (
               <button onClick={handleShowNumber}
-                className="flex items-center gap-1.5 px-4 py-2.5 bg-green-500 text-white rounded-xl text-sm font-semibold hover:bg-green-600">
-                <PhoneIcon className="w-4 h-4" /> Show Number
+                className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 bg-green-500 text-white rounded-xl text-xs sm:text-sm font-semibold hover:bg-green-600 flex-1 sm:flex-initial min-w-0">
+                <PhoneIcon className="w-4 h-4 shrink-0" />
+                <span className="truncate">Show Number</span>
               </button>
             )}
-            <button onClick={handleChat} className="btn-primary flex items-center gap-1.5">
-              <MessageCircle className="w-4 h-4" /> Chat
+            <button onClick={handleChat} className="btn-primary flex items-center justify-center gap-1.5 !px-3 sm:!px-5 !py-2.5 flex-1 sm:flex-initial min-w-0">
+              <MessageCircle className="w-4 h-4 shrink-0" />
+              <span>Chat</span>
             </button>
           </div>
         </div>

@@ -6,7 +6,7 @@ import { useAuth } from '@/context/AuthContext';
 import { useLocationStore, useLangStore, useNotificationStore } from '@/lib/store';
 import { notificationAPI } from '@/lib/api';
 import { useThrottle } from '@/hooks/useDebounce';
-import { Menu, X, Bell, ChevronDown, MapPin, Home, Users, UtensilsCrossed, ChefHat, LogOut, User, Settings, MessageCircle, Heart } from 'lucide-react';
+import { Menu, X, Bell, ChevronDown, MapPin, Home, Building, Users, UtensilsCrossed, ChefHat, LogOut, User, Settings, MessageCircle, Heart } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
 
 export default function Navbar() {
@@ -57,7 +57,7 @@ export default function Navbar() {
   useEffect(() => { setIsHydrated(true); }, []);
 
   const navLinks = [
-    { href: '/properties', label: t('navProperties'), icon: Home },
+    { href: '/properties', label: t('navProperties'), icon: Building },
     { href: '/roommate', label: t('navRoommate'), icon: Users },
     { href: '/mess', label: t('navMess'), icon: UtensilsCrossed },
     { href: '/cook', label: t('navCook'), icon: ChefHat },
