@@ -133,6 +133,19 @@ export default function PropertyDetail() {
           <ArrowLeft className="w-4 h-4" /> Back to listings
         </button>
 
+        {/* Rented Banner */}
+        {property.status === 'RENTED' && (
+          <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-2xl mb-6 flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600 shrink-0">
+              <Clock className="w-4 h-4" />
+            </div>
+            <div>
+              <p className="font-extrabold text-sm text-red-900">This property is rented out</p>
+              <p className="text-xs text-red-600">It is no longer available for booking, chat, or inquiry.</p>
+            </div>
+          </div>
+        )}
+
         {/* Photo Gallery */}
         <div className="relative rounded-2xl overflow-hidden bg-gray-100 mb-6">
           <div className="aspect-[16/9] relative">
@@ -303,25 +316,33 @@ export default function PropertyDetail() {
             <span className="text-lg sm:text-xl font-extrabold text-gray-900">₹{(property.rent || 0).toLocaleString('en-IN')}</span>
             <span className="text-xs sm:text-sm text-gray-400">/mo</span>
           </div>
-          <div className="flex gap-2 flex-1 justify-end min-w-0">
-            {showNumber ? (
-              <button onClick={handleCopyNumber}
-                className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 bg-green-500 text-white rounded-xl text-xs sm:text-sm font-semibold flex-1 sm:flex-initial min-w-0">
-                {copied ? <Check className="w-4 h-4 shrink-0" /> : <Copy className="w-4 h-4 shrink-0" />}
-                <span className="truncate">{showNumber}</span>
+          {property.status === 'RENTED' ? (
+            <div className="flex-1 text-right">
+              <span className="inline-flex items-center gap-1.5 px-6 py-2.5 bg-red-100 text-red-700 rounded-xl text-xs sm:text-sm font-extrabold uppercase tracking-wider">
+                RENTED OUT
+              </span>
+            </div>
+          ) : (
+            <div className="flex gap-2 flex-1 justify-end min-w-0">
+              {showNumber ? (
+                <button onClick={handleCopyNumber}
+                  className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 bg-green-500 text-white rounded-xl text-xs sm:text-sm font-semibold flex-1 sm:flex-initial min-w-0">
+                  {copied ? <Check className="w-4 h-4 shrink-0" /> : <Copy className="w-4 h-4 shrink-0" />}
+                  <span className="truncate">{showNumber}</span>
+                </button>
+              ) : (
+                <button onClick={handleShowNumber}
+                  className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 bg-green-500 text-white rounded-xl text-xs sm:text-sm font-semibold hover:bg-green-600 flex-1 sm:flex-initial min-w-0">
+                  <PhoneIcon className="w-4 h-4 shrink-0" />
+                  <span className="truncate">Show Number</span>
+                </button>
+              )}
+              <button onClick={handleChat} className="btn-primary flex items-center justify-center gap-1.5 !px-3 sm:!px-5 !py-2.5 flex-1 sm:flex-initial min-w-0">
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>Chat</span>
               </button>
-            ) : (
-              <button onClick={handleShowNumber}
-                className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 bg-green-500 text-white rounded-xl text-xs sm:text-sm font-semibold hover:bg-green-600 flex-1 sm:flex-initial min-w-0">
-                <PhoneIcon className="w-4 h-4 shrink-0" />
-                <span className="truncate">Show Number</span>
-              </button>
-            )}
-            <button onClick={handleChat} className="btn-primary flex items-center justify-center gap-1.5 !px-3 sm:!px-5 !py-2.5 flex-1 sm:flex-initial min-w-0">
-              <MessageCircle className="w-4 h-4 shrink-0" />
-              <span>Chat</span>
-            </button>
-          </div>
+            </div>
+          )}
         </div>
       </div>
 

@@ -42,9 +42,18 @@ export default function PropertyCard({ property, onSaveToggle }) {
 
   return (
     <Link href={`/properties/${property?.id}`} className="block">
-      <div className="card-hover overflow-hidden group hover:-translate-y-0.5 transition-all duration-300">
+      <div className={`card-hover overflow-hidden group transition-all duration-300 ${
+        property?.status === 'RENTED' ? 'opacity-75 saturate-[85%]' : 'hover:-translate-y-0.5'
+      }`}>
         {/* Image */}
         <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
+          {property?.status === 'RENTED' && (
+            <div className="absolute inset-0 bg-slate-950/40 flex items-center justify-center z-10 backdrop-blur-[1px]">
+              <span className="px-3.5 py-1.5 bg-red-600/90 text-white text-[11px] font-black uppercase tracking-widest rounded-lg shadow-md border border-red-500/20">
+                Rented Out
+              </span>
+            </div>
+          )}
           <div
             className="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
             onScroll={handleImageScroll}
@@ -135,9 +144,15 @@ export default function PropertyCard({ property, onSaveToggle }) {
               <span className="text-lg font-extrabold text-gray-900">₹{(property?.rent || 0).toLocaleString('en-IN')}</span>
               <span className="text-xs text-gray-400 font-medium">/month</span>
             </div>
-            <span className="text-xs font-bold text-orange-500 flex items-center gap-1 group-hover:gap-2 transition-all uppercase tracking-wider">
-              View <ArrowRight className="w-3.5 h-3.5" />
-            </span>
+            {property?.status === 'RENTED' ? (
+              <span className="text-xs font-bold text-red-500 uppercase tracking-wider">
+                Rented Out
+              </span>
+            ) : (
+              <span className="text-xs font-bold text-orange-500 flex items-center gap-1 group-hover:gap-2 transition-all uppercase tracking-wider">
+                View <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            )}
           </div>
         </div>
       </div>

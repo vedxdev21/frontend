@@ -50,7 +50,7 @@ export default function PropertiesBrowse() {
   const fetchProperties = useCallback(async (pageNum = 1, append = false) => {
     setLoading(true);
     try {
-      const params = { page: pageNum, limit: 12, sort: filters.sort, status: 'ACTIVE' };
+      const params = { page: pageNum, limit: 12, sort: filters.sort, status: 'ACTIVE,RENTED' };
       if (filters.city) params.city = filters.city;
       if (filters.type) params.type = filters.type;
       if (filters.area) params.area = filters.area;

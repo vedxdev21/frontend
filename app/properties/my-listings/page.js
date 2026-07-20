@@ -19,7 +19,11 @@ export default function MyListings() {
   const fetchListings = async () => {
     setLoading(true);
     try {
-      const params = tab !== 'all' ? { status: tab.toUpperCase() } : {};
+      const params = tab === 'active'
+        ? { status: 'ACTIVE,RENTED' }
+        : tab !== 'all'
+          ? { status: tab.toUpperCase() }
+          : {};
       const { data } = await propertyAPI.getMyListings(params);
       setListings(data.properties || data._list || data.data || []);
     } catch { toast.error('Failed to load listings'); }
@@ -130,7 +134,9 @@ export default function MyListings() {
           ) : (
             <div className="space-y-3">
               {listings.map(p => (
-                <div key={p.id} className="bg-white rounded-xl border border-gray-100 p-4 flex flex-col sm:flex-row gap-4">
+                <div key={p.id} className={`bg-white rounded-xl border border-gray-100 p-4 flex flex-col sm:flex-row gap-4 transition-all duration-300 ${
+                  p.status === 'RENTED' ? 'opacity-65 saturate-[85%]' : ''
+                }`}>
                   <div className="w-full sm:w-40 h-28 rounded-lg overflow-hidden bg-gray-100 shrink-0">
                     <img src={p.photos?.[0] || 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=300&h=200&fit=crop'}
                       alt={p.title} className="w-full h-full object-cover" />
@@ -160,6 +166,12 @@ export default function MyListings() {
                         <button onClick={() => handleStatusChange(p.id, 'RENTED')}
                           className="flex items-center gap-1 px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-xs font-medium hover:bg-blue-100">
                           <CheckCircle className="w-3 h-3" /> Mark Rented
+                        </button>
+                      )}
+                      {p.status === 'RENTED' && (
+                        <button onClick={() => handleStatusChange(p.id, 'ACTIVE')}
+                          className="flex items-center gap-1 px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-xs font-medium hover:bg-green-100">
+                          <CheckCircle className="w-3 h-3" /> Mark Active
                         </button>
                       )}
                       <button onClick={() => handleDelete(p.id)}
