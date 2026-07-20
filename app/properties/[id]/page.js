@@ -147,9 +147,9 @@ export default function PropertyDetail() {
         )}
 
         {/* Photo Gallery */}
-        <div className="relative rounded-2xl overflow-hidden bg-gray-100 mb-6">
-          <div className="aspect-[16/9] relative">
-            <img src={photos[currentPhoto]} alt={property.title} className="w-full h-full object-cover" />
+        <div className="relative rounded-2xl overflow-hidden bg-slate-950 mb-6">
+          <div className="aspect-[16/9] relative flex items-center justify-center">
+            <img src={photos[currentPhoto]} alt={property.title} className="max-h-full max-w-full object-contain" />
             {photos.length > 1 && (
               <>
                 <button onClick={() => setCurrentPhoto(p => Math.max(0, p - 1))}

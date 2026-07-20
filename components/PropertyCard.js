@@ -46,7 +46,7 @@ export default function PropertyCard({ property, onSaveToggle }) {
         property?.status === 'RENTED' ? 'opacity-75 saturate-[85%]' : 'hover:-translate-y-0.5'
       }`}>
         {/* Image */}
-        <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
+        <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">
           {property?.status === 'RENTED' && (
             <div className="absolute inset-0 bg-slate-950/40 flex items-center justify-center z-10 backdrop-blur-[1px]">
               <span className="px-3.5 py-1.5 bg-red-600/90 text-white text-[11px] font-black uppercase tracking-widest rounded-lg shadow-md border border-red-500/20">
@@ -63,7 +63,7 @@ export default function PropertyCard({ property, onSaveToggle }) {
                 key={`${property?.id || 'property'}-${idx}`}
                 src={photo}
                 alt={`${property?.title || 'Property'} ${idx + 1}`}
-                className="h-full w-full shrink-0 snap-center object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                className="h-full w-full shrink-0 snap-center object-contain group-hover:scale-[1.01] transition-transform duration-500"
                 onError={(e) => {
                   e.currentTarget.onerror = null;
                   e.currentTarget.src = PLACEHOLDER_IMAGES[idx % PLACEHOLDER_IMAGES.length];

@@ -137,9 +137,9 @@ export default function MyListings() {
                 <div key={p.id} className={`bg-white rounded-xl border border-gray-100 p-4 flex flex-col sm:flex-row gap-4 transition-all duration-300 ${
                   p.status === 'RENTED' ? 'opacity-65 saturate-[85%]' : ''
                 }`}>
-                  <div className="w-full sm:w-40 h-28 rounded-lg overflow-hidden bg-gray-100 shrink-0">
+                  <div className="w-full sm:w-40 h-28 rounded-lg overflow-hidden bg-slate-950 shrink-0 flex items-center justify-center">
                     <img src={p.photos?.[0] || 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=300&h=200&fit=crop'}
-                      alt={p.title} className="w-full h-full object-cover" />
+                      alt={p.title} className="max-h-full max-w-full object-contain" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-start justify-between">
